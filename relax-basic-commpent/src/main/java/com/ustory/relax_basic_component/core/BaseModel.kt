@@ -1,6 +1,7 @@
 package com.ustory.relax_basic_component.core
 
 
+import com.ustory.relax_basic_component.config.ConfigMananger
 import com.ustory.relax_basic_component.core.executor.ExecutionThread
 import com.ustory.relax_basic_component.core.executor.ThreadExecutor
 import io.reactivex.Observable
@@ -13,10 +14,10 @@ import io.reactivex.schedulers.Schedulers
  * Created by qiyue on 2018/8/19.
  */
 abstract class BaseModel(
-        val service: CoreService
+        val config: ConfigMananger
 ){
-    private val threadExecutor: ThreadExecutor = service.threadExecutor
-    private val postExecutionThread: ExecutionThread = service.postExecutionThread
+    private val threadExecutor: ThreadExecutor = config.threadExecutor
+    private val postExecutionThread: ExecutionThread = config.postExecutionThread
 
     var disposables: CompositeDisposable = CompositeDisposable()
 

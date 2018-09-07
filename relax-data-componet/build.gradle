@@ -1,0 +1,36 @@
+apply plugin: 'com.android.library'
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+
+    defaultConfig {
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    def dependencies = rootProject.ext.commonDependencies
+    def testDependencies = rootProject.ext.commonTestDependencies
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation dependencies.appcompatV7
+    implementation testDependencies.junit
+    implementation testDependencies.espressoCore
+    implementation testDependencies.runner
+    api project(':relax-basic-commpent')
+}

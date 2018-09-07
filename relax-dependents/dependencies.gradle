@@ -1,0 +1,99 @@
+ext {
+    // Android
+    androidCompileSdkVersion = 26
+    androidBuildToolsVersion = "26.0.2"
+    androidMinSdkVersion = 16
+    androidTargetSdkVersion = 26
+
+    kotlinVersion = '1.2.31'
+
+    // MD Libraries Release
+    mdLibVersionCode = 1
+    mdLibVersionName = "1.0.0"
+
+    // Libraries
+    // Android Libraries
+    defaultAndroidLibVersion = '26.1.0'
+    appcompatV7Version = defaultAndroidLibVersion
+    supportV4Version = defaultAndroidLibVersion
+    recyclerViewVersion = defaultAndroidLibVersion
+    cardViewVersion = defaultAndroidLibVersion
+    gridLayoutVersion = defaultAndroidLibVersion
+    constraintLayoutVersion = '1.0.2'
+    multidexVersion = '1.0.1'
+    archLifecycleExtensions = '1.0.0'
+    archLifecycleCompiler = '1.0.0'
+
+    // Network
+    retrofitVersion = '2.3.0'
+    retrofitAdapterRxjava2Version = '2.3.0'
+    retrofitConverterGsonVersion = '2.3.0'
+    okhttp3LogInterceptorVersion = '3.9.0'
+    gsonVersion = '2.8.2'
+    // RxJava
+    rxJavaVersion = '2.1.6'
+    rxAndroidVersion = '2.0.1'
+    // Util
+    timberVersion = '4.6.0'
+    crashReportVersion = '2.6.5'
+    // View
+    swipyVersion = '1.2.3'
+    materialDateTimePickerVersion = '3.2.1'
+    toggleButtonGroupVersion = '1.0.2'
+    notificationBadgeVersion = '0.2.0'
+    flowLayoutVersion = '1.1.0'
+    // Misc
+    frescoVersion = '1.5.0'
+    zxingAndroidEmbeddedVersion = '3.5.0'
+    // Pos
+    sunmiUiVersion = '1.1.22'
+    sunmiDsLibVersion = '1.0.9'
+
+    // Testing
+    jUnitVersion = '4.12'
+    espressoCoreVersion = '3.0.1'
+    runnerVersion = '1.0.1'
+
+    commonDependencies = [
+            kotlinStdlibJdk7      : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
+            kotlinReflect         : "org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}",
+
+            multidex              : "com.android.support:multidex:${multidexVersion}",
+            appcompatV7           : "com.android.support:appcompat-v7:${appcompatV7Version}",
+            supportV4             : "com.android.support:support-v4:${supportV4Version}",
+            lifecycleExtensions   : "android.arch.lifecycle:extensions:${archLifecycleExtensions}",
+            lifecycleCompiler     : "android.arch.lifecycle:compiler:${archLifecycleCompiler}",
+            recyclerView          : "com.android.support:recyclerview-v7:${recyclerViewVersion}",
+            cardView              : "com.android.support:cardview-v7:${cardViewVersion}",
+            gridLayout            : "com.android.support:gridlayout-v7:${gridLayoutVersion}",
+            constraintLayout      : "com.android.support.constraint:constraint-layout:${constraintLayoutVersion}",
+
+            rxJava                : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            rxAndroid             : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            retrofit              : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            retrofitAdapterRxjava2: "com.squareup.retrofit2:adapter-rxjava2:${retrofitAdapterRxjava2Version}",
+            retrofitConverterGson : "com.squareup.retrofit2:converter-gson:${retrofitConverterGsonVersion}",
+            okhttp3LogInterceptor : "com.squareup.okhttp3:logging-interceptor:${okhttp3LogInterceptorVersion}",
+            gson                  : "com.google.code.gson:gson:${gsonVersion}",
+            swipy                 : "com.github.omadahealth:swipy:${swipyVersion}@aar",
+            materialDateTimePicker: "com.wdullaer:materialdatetimepicker:${materialDateTimePickerVersion}",
+            toggleButtonGroup     : "com.nex3z:toggle-button-group:${toggleButtonGroupVersion}",
+            notificationBadge     : "com.nex3z:notification-badge:${notificationBadgeVersion}",
+            flowLayout            : "com.nex3z:flow-layout:${flowLayoutVersion}",
+            zxingAndroidEmbedded  : "com.journeyapps:zxing-android-embedded:${zxingAndroidEmbeddedVersion}",
+            fresco                : "com.facebook.fresco:fresco:${frescoVersion}",
+
+            timber                : "com.jakewharton.timber:timber:${timberVersion}",
+            crashReport           : "com.tencent.bugly:crashreport:${crashReportVersion}",
+
+            sunmiUiVersion        : "com.sunmi:sunmiui:${sunmiUiVersion}",
+            sunmiDsLibVersion     : "com.sunmi:DS_Lib:${sunmiDsLibVersion}",  // 商米 T1 客显
+    ]
+
+    commonTestDependencies = [
+            junit       : "junit:junit:${jUnitVersion}",
+            espressoCore: "com.android.support.test.espresso:espresso-core:${espressoCoreVersion}",
+            runner      : "com.android.support.test:runner:${runnerVersion}",
+    ]
+
+}

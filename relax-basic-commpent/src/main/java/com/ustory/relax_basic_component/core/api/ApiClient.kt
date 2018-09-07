@@ -16,7 +16,8 @@ import java.util.concurrent.TimeUnit
  */
 class ApiClient(val config: Config) {
 
-    val apiService: ApiService
+
+    val retrofit:Retrofit
 
     init {
         val httpClient = OkHttpClient.Builder()
@@ -57,14 +58,20 @@ class ApiClient(val config: Config) {
                 .writeTimeout(config.writeTimeOut, TimeUnit.SECONDS)
                 .build()
 
-        val retrofit = Retrofit.Builder()
+        retrofit = Retrofit.Builder()
                 .baseUrl(config.serverUrl)
                 .client(httpClient)
                 .addConverterFactory(GsonConverterFactory.create(Gson()))
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build()
 
-        apiService = retrofit.create(ApiService::class.java)
+    }
+
+
+    fun <T> createApiService(clazz: Class<T>):T{
+
+        return retrofit.create(clazz)
+
     }
 
     data class Config(
