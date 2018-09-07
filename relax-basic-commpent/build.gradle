@@ -55,7 +55,7 @@ dependencies {
     api dependencies.okhttp3LogInterceptor
     api dependencies.lifecycleExtensions
     kapt dependencies.lifecycleCompiler
-
+    api dependencies.constraintLayout
 
 }
 repositories {

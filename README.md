@@ -1,25 +1,40 @@
 # Relax
+
 Relax is a android frame by Component MVVM model
 
+1. 架构模式
 
 
-1. module-business   module-business   module-business   module-business
+1. 业务层，各种模块 module-business-one   module-business-two   module-business-three   module-business-four
 
-2. relax-business-component   基本业务组件
+2. relax-business-component
 
-3. relax-data-component   数据组件
+      基础业务层，如地图封装、IM封装、日志上传封装、友盟统计封装、Bugly封装
 
-4. relax-basic-component  基础框架组件
+3. relax-data-component
 
-5. relax-dependents  公共依赖
+      数据层，提供业务数据，包含网络数据、本地数据，SP数据
 
+4. relax-basic-component
+
+      基础组件层, 一些框架必须要用的library、核心的架构实现、如mvvm、mvp基础架构、自定义UI组件等
+
+5. relax-dependents
+
+      公共依赖集合，提供统一配置
+
+
+
+#### 框架优点
+
+1. 模块可以单独调试,通过配置
 
 #### 待实现
 实现每一层都可以单独调试
 
 分配不同的AndroidManifest  和测试用例
 
-#### 
+####
 添加ARouter，组件跳转？ 传递数据？广播传递数据？
 
 ####

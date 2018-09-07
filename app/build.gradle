@@ -1,8 +1,13 @@
-apply plugin: 'com.android.application'
+if(isApp.toBoolean()){
+    apply plugin: 'com.android.application'
+}else{
+    apply plugin: 'com.android.library'
+}
+
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-
+kapt { generateStubs = true }
 android {
 
     def globalConfiguration = rootProject.extensions.getByName("ext")
@@ -25,9 +30,23 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+
+    sourceSets {
+        main {
+            if (isApp.toBoolean()) {
+                manifest.srcFile 'src/release/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/debug/AndroidManifest.xml'
+            }
+        }
+    }
 }
 
+
 dependencies {
-    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
-    implementation project(':relax-business-component')
+    if(!relaxBusinessComponent_isApp){
+        implementation project(':relax-business-component')
+    }
 }
+
