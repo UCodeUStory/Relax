@@ -24,6 +24,16 @@ Relax is a android frame by Component MVVM model
       公共依赖集合，提供统一配置
 
 
+### 项目内容
+1. 实现组件化，可以分层调试，单独模块调试
+
+
+### Library
+1. Rxjava
+2. Retrofit
+3. LifeCycle
+
+
 
 #### 框架优点
 
