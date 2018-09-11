@@ -22,8 +22,18 @@ android {
         }
     }
 
+    lintOptions {
+        abortOnError false
+    }
 }
 
+gradle.taskGraph.whenReady {
+    tasks.each { task ->
+        if (task.name.equals('mockableAndroidJar')) {
+            task.enabled = false
+        }
+    }
+}
 dependencies {
     def dependencies = rootProject.ext.commonDependencies
     def testDependencies = rootProject.ext.commonTestDependencies

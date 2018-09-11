@@ -7,4 +7,7 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
     }
+
+
+    public lateinit var name:String
 }

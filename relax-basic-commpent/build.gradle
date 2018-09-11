@@ -31,6 +31,14 @@ android {
 
 }
 
+gradle.taskGraph.whenReady {
+    tasks.each { task ->
+        if (task.name.equals('mockableAndroidJar')) {
+            task.enabled = false
+        }
+    }
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 

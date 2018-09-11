@@ -11,7 +11,7 @@
     <Button
         android:id="@+id/btn_into_login_page"
         android:layout_width="match_parent"
-        android:text="跳转登录页面"
+        android:text="@string/turn_into_login"
         android:layout_height="wrap_content" />
 
 </android.support.constraint.ConstraintLayout>

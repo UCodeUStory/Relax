@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Relax</string>
+    <string name="turn_into_login">跳转登录页面</string>
 </resources>

@@ -1,6 +1,6 @@
 # Relax
 
-Relax is a android frame by Component MVVM model
+Relax is a android frame by Component Frame
 
 1. 架构模式
 
