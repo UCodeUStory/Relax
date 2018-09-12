@@ -1,9 +1,9 @@
-package com.ustory.relax_basic_component.core
+package com.ustory.relax_basic_component.mvvm
 
 
 import com.ustory.relax_basic_component.config.ConfigMananger
-import com.ustory.relax_basic_component.core.executor.ExecutionThread
-import com.ustory.relax_basic_component.core.executor.ThreadExecutor
+import com.ustory.relax_basic_component.mvvm.executor.ExecutionThread
+import com.ustory.relax_basic_component.mvvm.executor.ThreadExecutor
 import io.reactivex.Observable
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable

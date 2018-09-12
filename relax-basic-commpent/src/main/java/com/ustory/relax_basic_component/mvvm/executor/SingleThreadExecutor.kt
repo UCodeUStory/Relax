@@ -1,5 +1,5 @@
 package com.ustory.basic_component.core.executor
-import com.ustory.relax_basic_component.core.executor.ThreadExecutor
+import com.ustory.relax_basic_component.mvvm.executor.ThreadExecutor
 import java.util.concurrent.LinkedBlockingQueue
 import java.util.concurrent.RejectedExecutionHandler
 import java.util.concurrent.ThreadPoolExecutor

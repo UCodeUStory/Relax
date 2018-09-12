@@ -1,8 +1,8 @@
-package com.ustory.relax_basic_component.core.api
+package com.ustory.relax_basic_component.mvvm.api
 
 import android.content.Context
-import com.ustory.relax_basic_component.core.utils.DeviceInfoUtil
-import com.ustory.relax_basic_component.core.utils.JsonUtil
+import com.ustory.relax_basic_component.mvvm.utils.DeviceInfoUtil
+import com.ustory.relax_basic_component.mvvm.utils.JsonUtil
 
 
 data class DeviceHeader(

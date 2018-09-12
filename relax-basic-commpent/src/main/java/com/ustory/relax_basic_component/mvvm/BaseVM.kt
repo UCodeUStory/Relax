@@ -1,4 +1,4 @@
-package com.ustory.relax_basic_component.core
+package com.ustory.relax_basic_component.mvvm
 
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel

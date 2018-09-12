@@ -1,14 +1,13 @@
-package com.ustory.relax_basic_component.core
+package com.ustory.relax_basic_component.mvvm
 
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.widget.Toast
+import com.ustory.relax_basic_component.core.BaseAppCompatActivity
 
 /**
  * Created by qiyue on 2018/8/19.
  */
-abstract class BaseActivity<T : BaseVM>: BaseAppCompatActivity() {
+abstract class MvvmBaseActivity<T : BaseVM>: BaseAppCompatActivity() {
     lateinit var viewmodel:T
 
     abstract val layoutId:Int

@@ -1,4 +1,4 @@
-package com.ustory.relax_basic_component.core.utils
+package com.ustory.relax_basic_component.mvvm.utils
 
 import com.google.gson.Gson
 

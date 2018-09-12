@@ -3,10 +3,10 @@ package com.ustory.relax.app
 import android.app.Application
 import android.os.Build
 import com.ustory.relax_basic_component.BuildConfig
-import com.ustory.relax_basic_component.core.CoreService
-import com.ustory.relax_basic_component.core.api.ApiClient
-import com.ustory.relax_basic_component.core.api.DeviceHeader
-import com.ustory.relax_basic_component.core.utils.DeviceInfoUtil
+import com.ustory.relax_basic_component.mvvm.CoreService
+import com.ustory.relax_basic_component.mvvm.api.ApiClient
+import com.ustory.relax_basic_component.mvvm.api.DeviceHeader
+import com.ustory.relax_basic_component.mvvm.utils.DeviceInfoUtil
 
 /**
  * Created by qiyue on 2018/8/24.

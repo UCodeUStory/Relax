@@ -3,8 +3,7 @@ package com.ustory.relax_business_component.login.model
 import android.util.Log
 import com.ustory.relax.data.User
 import com.ustory.relax_basic_component.config.ConfigMananger
-import com.ustory.relax_basic_component.core.BaseModel
-import com.ustory.relax_basic_component.core.CoreService
+import com.ustory.relax_basic_component.mvvm.BaseModel
 import io.reactivex.Observable
 import io.reactivex.Single
 import io.reactivex.SingleOnSubscribe

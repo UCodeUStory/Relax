@@ -2,7 +2,7 @@ package com.ustory.relax_business_component.login.viewmodel
 
 import android.arch.lifecycle.MutableLiveData
 import com.ustory.relax.data.User
-import com.ustory.relax_basic_component.core.BaseVM
+import com.ustory.relax_basic_component.mvvm.BaseVM
 import com.ustory.relax_business_component.login.model.LoginModel
 
 

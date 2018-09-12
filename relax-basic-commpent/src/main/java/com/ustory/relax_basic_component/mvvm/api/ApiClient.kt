@@ -1,7 +1,6 @@
-package com.ustory.relax_basic_component.core.api
+package com.ustory.relax_basic_component.mvvm.api
 import com.google.gson.Gson
 import com.ustory.relax_basic_component.BuildConfig
-import com.ustory.relax_basic_component.core.ApiService
 
 
 import okhttp3.OkHttpClient

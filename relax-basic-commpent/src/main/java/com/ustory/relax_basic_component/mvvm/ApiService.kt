@@ -1,4 +1,4 @@
-package com.ustory.relax_basic_component.core
+package com.ustory.relax_basic_component.mvvm
 
 
 /**

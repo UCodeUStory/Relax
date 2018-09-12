@@ -4,7 +4,6 @@ import android.os.Bundle
 import com.ustory.relax_basic_component.core.BaseAppCompatActivity
 import com.ustory.relax_business_component.login.view.LoginActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import java.io.File
 
 class MainActivity : BaseAppCompatActivity() {
 

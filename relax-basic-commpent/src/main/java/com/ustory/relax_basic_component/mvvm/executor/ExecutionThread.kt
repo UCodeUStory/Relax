@@ -1,4 +1,4 @@
-package com.ustory.relax_basic_component.core.executor
+package com.ustory.relax_basic_component.mvvm.executor
 
 import io.reactivex.Scheduler
 
