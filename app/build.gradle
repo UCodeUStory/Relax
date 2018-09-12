@@ -7,8 +7,7 @@ if(isApp.toBoolean()){
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'findbugs'
-apply plugin: 'checkstyle'
+apply from: "../relax-config/check_code.gradle"
 android {
 
     def globalConfiguration = rootProject.extensions.getByName("ext")
@@ -32,7 +31,6 @@ android {
         }
     }
 
-
     sourceSets {
         main {
             if (isApp.toBoolean()) {
@@ -53,27 +51,7 @@ android {
     }
 }
 
-assemble.dependsOn 'checkstyle'
 
-task checkstyle(type: Checkstyle) {
-    source '../app/src','../relax-business-component/src','../relax-data-componet/src','../relax-basic-commpent/src'
-    configFile file("config/checkstyle.xml")
-    include '**/*'
-    exclude '**/gen/**'
-    ignoreFailures true
-    reports { // 支持html和xml两种报告形式，可以任选其一(html更具有可读性)
-        xml.enabled = true
-        html.enabled = true
-        xml {
-            destination file("$reportsDir/checkstyle/checkstyle.xml")
-        }
-        html {
-            destination file("$reportsDir/checkstyle/checkstyle.html")
-        }
-    }
-
-    classpath = files()
-}
 
 
 gradle.taskGraph.whenReady {
@@ -84,45 +62,6 @@ gradle.taskGraph.whenReady {
     }
 }
 
-task findbugs(type: FindBugs,dependsOn:"connectedAndroidTest") {//
-    ignoreFailures = true
-    effort = "default"
-    reportLevel = "medium"
-    //这里填写项目classes目录
-    classes = files("${project.rootDir}/andbase-core/build/intermediates/classes")
-    source = fileTree('src/main/java')
-    classpath = files()
-    reports {
-        //只能开启一个
-        xml.enabled = false
-        html.enabled = true
-    }
-}
-
-task jacocoTestReport(type:JacocoReport){//,dependsOn:"connectedAndroidTest"
-    group = "Reporting"
-    description = "Generate Jacoco coverage reports after running tests."
-    reports{
-        xml.enabled = false
-        html.enabled = true
-        csv.enabled = false
-    }
-    classDirectories = fileTree(
-            dir : "$buildDir/intermediates/classes/debug",
-            excludes : [
-                    '**/*Test.class',
-                    '**/R.class',
-                    '**/R$*.class',
-                    '**/BuildConfig.*',
-                    '**/Manifest*.*'
-            ]
-    )
-    def coverageSourceDirs = ['src/main/java']
-    additionalSourceDirs = files(coverageSourceDirs)
-    sourceDirectories = files(coverageSourceDirs)
-    additionalClassDirs = files(coverageSourceDirs)
-    executionData = files("$buildDir/outputs/code-coverage/connected/coverage.ec")
-}
 
 dependencies {
     if(!relaxBusinessComponent_isApp.toBoolean()){

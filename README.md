@@ -26,6 +26,8 @@ Relax is a android frame by Component Frame
 
 ### 项目内容
 1. 实现组件化，可以分层调试，单独模块调试
+2. 添加 checkstyle,pmd,findBugs对代码静态扫描，虽然目前只支持Java检查，但开发过程中还是会用到一些Java代码和xml的检查
+3. 添加 basic-commpent 层MVVM支持
 
 
 ### Library
@@ -64,7 +66,6 @@ common组件是基础库，添加一些公用的类；
 
 #### 编写自动打包脚本
 
-#### 代码质量检测工具FindBugs、PMD和CheckStyle
 
 
 

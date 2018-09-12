@@ -1,0 +1,90 @@
+
+apply plugin: 'findbugs'
+apply plugin: 'checkstyle'
+apply plugin: 'pmd'
+
+assemble.dependsOn 'checkstyle'
+
+task checkstyle(type: Checkstyle,dependsOn:'pmd') {
+    source '../app/src','../relax-business-component/src','../relax-data-componet/src','../relax-basic-commpent/src'
+    configFile file("../relax-config/checkstyle.xml")
+    include '**/*'
+    exclude '**/gen/**'
+    ignoreFailures true
+    reports { // 支持html和xml两种报告形式，可以任选其一(html更具有可读性)
+        xml.enabled = true
+        html.enabled = true
+        xml {
+            destination file("$reportsDir/checkstyle/checkstyle.xml")
+        }
+        html {
+            destination file("$reportsDir/checkstyle/checkstyle.html")
+        }
+    }
+    classpath = files()
+}
+
+/**
+ * 只能分析Java
+ *
+ */
+task pmd (type: Pmd,dependsOn:'findbugs') {
+    ruleSets = [
+            'java-android',
+            'java-basic',
+            'java-braces',
+            'java-clone',
+            'java-codesize',
+            //'java-comments',
+            'java-controversial',
+            'java-coupling',
+            'java-design',
+            'java-empty',
+            'java-finalizers',
+            'java-imports',
+            'java-j2ee',
+            'java-javabeans',
+            'java-junit',
+            'java-logging-jakarta-commons',
+            'java-logging-java',
+            'java-migrating',
+            'java-naming',
+            'java-optimizations',
+            'java-strictexception',
+            'java-strings',
+            'java-sunsecure',
+            'java-typeresolution',
+            'java-unnecessary',
+            'java-unusedcode'
+    ]
+    source = fileTree('src')
+    ignoreFailures = true
+    reports {
+        xml.enabled = false
+        html.enabled = true
+    }
+}
+
+/**
+ * 目前只支持Java代码检查
+ */
+task findbugs(type: FindBugs) {//
+    ignoreFailures = true
+    effort = "default"
+    reportLevel = "medium"
+    //这里填写项目classes目录
+    classes = files(
+            "${project.rootDir}/app/build/intermediates/classes",
+            "${project.rootDir}/relax-basic-commpent/build/intermediates/classes",
+            "${project.rootDir}/relax-business-component/build/intermediates/classes",
+            "${project.rootDir}/relax-data-componet/build/intermediates/classes"
+    )
+    source = fileTree('src/main/java')
+    classpath = files()
+    reports {
+        //只能开启一个
+        xml.enabled = false
+        html.enabled = true
+    }
+}
+
