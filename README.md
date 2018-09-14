@@ -4,6 +4,10 @@ Relax 基于Kotlin语言编写的一套组件化框架
 
 Relax is a android frame by Component Frame
 
+#### 语言
+[Kotlin解惑站点,希望我踩过的坑对你有帮助]()
+
+
 #### 架构模式
 
 
@@ -39,14 +43,25 @@ Relax is a android frame by Component Frame
 
 #### Library
 
-1. [Rxjava]()
-2. [Retrofit]()
+1. [Retrofit](https://github.com/square/retrofit)
+2. [OKHttp](https://github.com/square/okhttp)
+3. [GSON](https://github.com/google/gson)
+4. [RxJava](https://github.com/ReactiveX/RxJava)
+5. [Glide](https://github.com/bumptech/glide)
+6. [LeakCanary](https://github.com/square/leakcanary)
+7. [Aspect](http://mvnrepository.com/artifact/org.aspectj/aspectjtools)
+
+1. [RxJava](https://github.com/ReactiveX/RxJava)
+2. [Retrofit](https://github.com/square/retrofit)
 3. [LifeCycle]()
 4. [LiveData]()
 5. [ViewModel]()
-6. [ARouter]()
-7. [EventBus]()
-8. [Dagger]()
+6. [ARouter](https://github.com/alibaba/ARouter)
+7. [EventBus](http://greenrobot.org/eventbus/)
+8. [Dagger](https://google.github.io/dagger/android)
+9. [OKHttp](https://github.com/square/okhttp)
+10. [GSON](https://github.com/google/gson)
+11. [Glide](https://github.com/bumptech/glide)
 
 
 
