@@ -1,15 +1,14 @@
 ### Relax
 
-Relax 基于Kotlin语言编写的一套组件化框架
+Relax 基于Kotlin语言编写的一套组件化框架，内部可以实现灵活的配置
 
 Relax is a android frame by Component Frame
 
 #### 语言
-[Kotlin解惑站点,希望我踩过的坑对你有帮助]()
+[Kotlin 解惑(>_<) 希望我踩过的坑对你有所帮助](https://github.com/UCodeUStory/Relax/tree/master/source/closure.md)
 
 
 #### 架构模式
-
 
 1. 业务层，各种模块 module-business-one   module-business-two   module-business-three   module-business-four
 
