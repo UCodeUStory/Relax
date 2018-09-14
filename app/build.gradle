@@ -15,7 +15,9 @@ android {
     compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
 
     defaultConfig {
-        applicationId "com.ustory.relax"
+        if(isApp.toBoolean()) {
+            applicationId "com.ustory.relax"
+        }
         minSdkVersion globalConfiguration["androidMinSdkVersion"]
         targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
         versionCode 1

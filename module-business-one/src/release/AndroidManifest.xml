@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ustory.relax_business_component">
+
+    <application>
+        <activity android:name="com.ustory.module_business_one.KotlinDemoActivity"></activity>
+    </application>
+
+</manifest>
