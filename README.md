@@ -27,25 +27,35 @@ Relax is a android frame by Component Frame
 
 
 #### 项目内容
+
 1. 实现组件化，可以分层调试，单独模块调试
 2. 支持 checkstyle,pmd,findBugs对代码静态扫描，虽然目前只支持Java检查，但开发过程中还是会用到一些Java代码和xml的检查
-3. basic-commpent层 添加MVVM支持
-4. 根据配置动态选择打包MVP文件夹 或 MVVM文件夹
+3. basic-component层 添加MVVM支持
+4. basic-component层，添加MVP支持
+5. 根据配置动态选择打包MVP架构 或 MVVM架构
+6. 封装kotlin版本的权限检查，使用更简单
+
 
 
 #### Library
-1. Rxjava
-2. Retrofit
-3. LifeCycle
-4. LiveData
-5. ViewModel
-6. ARouter
-7. EventBus
-8. Dagger
+
+1. [Rxjava]()
+2. [Retrofit]()
+3. [LifeCycle]()
+4. [LiveData]()
+5. [ViewModel]()
+6. [ARouter]()
+7. [EventBus]()
+8. [Dagger]()
 
 
 
 
+
+******************待添加内容******************
+
+business封装图片加载业务 ，config 是否开启缓存，等等
+basic实现各种图片加载库的配置
 
 ####
 添加ARouter，组件跳转？ 传递数据？广播传递数据？
@@ -68,6 +78,7 @@ common组件是基础库，添加一些公用的类；
 #### 编写自动打包脚本 实现自动上传指定服务器
 
 
+******************待添加内容******************
 
 
 

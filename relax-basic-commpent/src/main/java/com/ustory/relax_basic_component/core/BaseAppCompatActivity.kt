@@ -3,6 +3,7 @@ package com.ustory.relax_basic_component.core
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
+import com.wangpos.kotlin_s_mvp.base.AndroidPermission
 
 open class BaseAppCompatActivity : AppCompatActivity() {
 
@@ -23,6 +24,10 @@ open class BaseAppCompatActivity : AppCompatActivity() {
         startActivity(Intent(this,clazz))
     }
 
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+        AndroidPermission.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+    }
 
 
 
