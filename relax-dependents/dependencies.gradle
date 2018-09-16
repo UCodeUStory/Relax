@@ -53,6 +53,7 @@ ext {
     jUnitVersion = '4.12'
     espressoCoreVersion = '3.0.1'
     runnerVersion = '1.0.1'
+    arouterVersion = '1.1.2.1'
 
     commonDependencies = [
             kotlinStdlibJdk7      : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
@@ -87,7 +88,8 @@ ext {
             crashReport           : "com.tencent.bugly:crashreport:${crashReportVersion}",
 
             sunmiUiVersion        : "com.sunmi:sunmiui:${sunmiUiVersion}",
-            sunmiDsLibVersion     : "com.sunmi:DS_Lib:${sunmiDsLibVersion}",  // 商米 T1 客显
+            sunmiDsLibVersion     : "com.sunmi:DS_Lib:${sunmiDsLibVersion}",
+            arouter               : "com.alibaba:arouter-compiler:${arouterVersion}",
     ]
 
     commonTestDependencies = [

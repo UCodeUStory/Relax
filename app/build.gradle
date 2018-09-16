@@ -98,7 +98,7 @@ dependencies {
     }
     implementation project(':relax-business-component')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    kapt 'com.alibaba:arouter-compiler:1.1.2.1'
+    kapt dependencies.arouter
 }
 repositories {
     mavenCentral()

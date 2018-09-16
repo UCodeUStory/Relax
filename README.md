@@ -42,14 +42,6 @@ Relax is a android frame by Component Frame
 
 #### Library
 
-1. [Retrofit](https://github.com/square/retrofit)
-2. [OKHttp](https://github.com/square/okhttp)
-3. [GSON](https://github.com/google/gson)
-4. [RxJava](https://github.com/ReactiveX/RxJava)
-5. [Glide](https://github.com/bumptech/glide)
-6. [LeakCanary](https://github.com/square/leakcanary)
-7. [Aspect](http://mvnrepository.com/artifact/org.aspectj/aspectjtools)
-
 1. [RxJava](https://github.com/ReactiveX/RxJava)
 2. [Retrofit](https://github.com/square/retrofit)
 3. [LifeCycle]()
@@ -61,20 +53,19 @@ Relax is a android frame by Component Frame
 9. [OKHttp](https://github.com/square/okhttp)
 10. [GSON](https://github.com/google/gson)
 11. [Glide](https://github.com/bumptech/glide)
+12. [LeakCanary](https://github.com/square/leakcanary)
+13. [Aspect](http://mvnrepository.com/artifact/org.aspectj/aspectjtools)
 
 
 
+#### 开发过程错误总结
+- [错误日志](https://github.com/UCodeUStory/Relax/tree/master/source/error_note.md)
 
 
 ******************待添加内容******************
 
 business封装图片加载业务 ，config 是否开启缓存，等等
 basic实现各种图片加载库的配置
-
-####
-添加ARouter，组件跳转？ 传递数据？广播传递数据？
-
-####
 
 business -component 添加常用业务组件，如登录，注册，友盟统计（可配置，可以不使用，不编译，使用多个文件包）
 

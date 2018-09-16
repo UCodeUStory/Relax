@@ -68,5 +68,5 @@ dependencies {
     implementation testDependencies.espressoCore
     implementation testDependencies.runner
     implementation project(':relax-business-component')
-    kapt 'com.alibaba:arouter-compiler:1.1.2.1'
+    kapt dependencies.arouter
 }
