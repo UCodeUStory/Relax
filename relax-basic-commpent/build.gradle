@@ -16,6 +16,11 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+        kapt {
+            arguments {
+                arg("moduleName", project.getName())
+            }
+        }
     }
 
     buildTypes {
@@ -81,6 +86,9 @@ dependencies {
     api dependencies.lifecycleExtensions
     kapt dependencies.lifecycleCompiler
     api dependencies.constraintLayout
+
+    api 'com.alibaba:arouter-api:1.2.1.1'
+    kapt 'com.alibaba:arouter-compiler:1.1.2.1'
 
 }
 repositories {

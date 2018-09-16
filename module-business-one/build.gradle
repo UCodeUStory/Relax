@@ -17,9 +17,15 @@ android {
         versionCode 1
         versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        multiDexEnabled true
+
         if(relaxBusinessOne_isApp.toBoolean()){
             applicationId "com.relax_business_one.app"
+        }
+        multiDexEnabled true
+        kapt {
+            arguments {
+                arg("moduleName", project.getName())
+            }
         }
 
     }
@@ -47,6 +53,13 @@ android {
 
 }
 
+gradle.taskGraph.whenReady {
+    tasks.each { task ->
+        if (task.name.equals('mockableAndroidJar')) {
+            task.enabled = false
+        }
+    }
+}
 dependencies {
     def dependencies = rootProject.ext.commonDependencies
     def testDependencies = rootProject.ext.commonTestDependencies
@@ -56,5 +69,5 @@ dependencies {
     implementation testDependencies.espressoCore
     implementation testDependencies.runner
     implementation project(':relax-business-component')
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    kapt 'com.alibaba:arouter-compiler:1.1.2.1'
 }

@@ -17,13 +17,20 @@ android {
     defaultConfig {
         if(isApp.toBoolean()) {
             applicationId "com.ustory.relax"
+            multiDexEnabled true
         }
         minSdkVersion globalConfiguration["androidMinSdkVersion"]
         targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
         versionCode 1
         versionName "1.0.0"
-        multiDexEnabled true
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        kapt {
+            arguments {
+                arg("moduleName", project.getName())
+            }
+        }
     }
 
     buildTypes {
@@ -66,10 +73,32 @@ gradle.taskGraph.whenReady {
 
 
 dependencies {
-    if(!relaxBusinessComponent_isApp.toBoolean()){
-        implementation project(':relax-business-component')
+
+    def dependencies = rootProject.ext.commonDependencies
+    def testDependencies = rootProject.ext.commonTestDependencies
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation dependencies.appcompatV7
+    implementation testDependencies.junit
+    implementation testDependencies.espressoCore
+    implementation testDependencies.runner
+
+//
+//    implementation project(':relax-business-component')
+
+
+//    if (!relaxBusinessComponent_isApp.toBoolean()) {
+//        implementation project(':relax-business-component')
+//    }
+//
+    if (isApp.toBoolean()) {
+        implementation project(':module-business-four')
+        implementation project(':module-business-one')
+        implementation project(':module-business-three')
+        implementation project(':module-business-two')
     }
+    implementation project(':relax-business-component')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    kapt 'com.alibaba:arouter-compiler:1.1.2.1'
 }
 repositories {
     mavenCentral()

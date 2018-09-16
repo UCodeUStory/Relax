@@ -5,7 +5,7 @@ Relax 基于Kotlin语言编写的一套组件化框架，内部可以实现灵�
 Relax is a android frame by Component Frame
 
 #### 语言
-[Kotlin 解惑(>_<) 希望我踩过的坑对你有所帮助](https://github.com/UCodeUStory/Relax/tree/master/source/closure.md)
+[Kotlin 解惑(>_<) 希望我踩过的坑对你有所帮助](https://github.com/UCodeUStory/Relax/tree/master/source/kotlin.md)
 
 
 #### 架构模式

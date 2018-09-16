@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context="com.ustory.module_business_one.KotlinDemoActivity">
 
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/btn_test_arouter"
+        android:textSize="15sp"
+        android:padding="10sp"
+        android:textColor="#333333"
+        android:text="Test ARouter"
+        android:layout_height="wrap_content" />
 </android.support.constraint.ConstraintLayout>

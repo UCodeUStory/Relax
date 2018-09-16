@@ -3,15 +3,21 @@ package com.ustory.module_business_one
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.alibaba.android.arouter.launcher.ARouter
+import com.ustory.module_business_one.data.Person
 
 import com.ustory.relax_basic_component.core.BaseAppCompatActivity
-import com.ustory.relax_business_component.R
+import kotlinx.android.synthetic.main.activity_kotlin_demo.*
 
+@Route(path = "/moudle1/KotlinDemoActivity")
 class KotlinDemoActivity : BaseAppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kotlin_demo)
+
+        btn_test_arouter.setOnClickListener { ARouter.getInstance().build("/moudle2/testARouterActivity").navigation() }
 
         var test = { x: Int, y: Int -> x + y }
 
@@ -46,6 +52,35 @@ class KotlinDemoActivity : BaseAppCompatActivity() {
         }
 
 
+
+
+        val people = listOf<Person>(Person("aaa",123))
+        people.maxBy {
+            it.age
+        }
+
+
+
+
+
+        // maxBy原理
+
+//        public inline fun <T, R : Comparable<R>> Iterable<T>.maxBy(selector: (T) -> R): T? {
+//            val iterator = iterator()
+//            if (!iterator.hasNext()) return null
+//            var maxElem = iterator.next()
+//            var maxValue = selector(maxElem)
+//            while (iterator.hasNext()) {
+//                val e = iterator.next()
+//                val v = selector(e)
+//                if (maxValue < v) {
+//                    maxElem = e
+//                    maxValue = v
+//                }
+//            }
+//            return maxElem
+//        }
+
     }
     // 没有参数的定义必须写个 ()
     fun setNoParamLambdaOnClick(l: (() -> Unit)) {
@@ -68,6 +103,8 @@ class KotlinDemoActivity : BaseAppCompatActivity() {
     fun setLambdaAndOtherParamOnClick(position:Int,l: ((View, View) -> Unit)) {
 
     }
+
+
 
 }
 
