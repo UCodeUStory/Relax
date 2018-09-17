@@ -4,6 +4,8 @@ import android.Manifest
 import android.app.Dialog
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
+import android.view.View
 import com.alibaba.android.arouter.launcher.ARouter
 import com.ustory.module_business_one.KotlinDemoActivity
 import com.ustory.relax_basic_component.core.BaseAppCompatActivity
@@ -23,6 +25,9 @@ class MainActivity : BaseAppCompatActivity() {
 
 //            ARouter.getInstance().build("/moudle1/KotlinDemoActivity").navigation()
         }
+
+
+
 
 
 
@@ -56,5 +61,6 @@ class MainActivity : BaseAppCompatActivity() {
 
 
     }
+
 }
 
