@@ -2,7 +2,7 @@ package com.ustory.relax_basic_component.mvvm
 
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
-import com.ustory.relax_basic_component.core.BaseAppCompatActivity
+import com.ustory.relax_basic_component.core.base.BaseAppCompatActivity
 
 /**
  * Created by qiyue on 2018/8/19.

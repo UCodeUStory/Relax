@@ -2,8 +2,8 @@ package com.ustory.relax_business_component.login.viewmodel
 
 import android.arch.lifecycle.MutableLiveData
 import com.ustory.relax.data.User
-import com.ustory.relax_basic_component.app.App
 import com.ustory.relax_basic_component.mvvm.BaseVM
+import com.ustory.relax_business_component.app.App
 import com.ustory.relax_business_component.login.model.LoginModel
 
 
@@ -16,9 +16,7 @@ class LoginViewModel: BaseVM(){
 
     val user2: MutableLiveData<User> = MutableLiveData()
 
-//    private val loginModel:LoginModel = LoginModel()
-
-    private val loginModel: LoginModel = App.service.create(::LoginModel)
+    private val loginModel: LoginModel = App.coreService.create(::LoginModel)
 
     override fun onCleared() {
         super.onCleared()

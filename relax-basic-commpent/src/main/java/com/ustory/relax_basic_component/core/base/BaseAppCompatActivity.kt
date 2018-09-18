@@ -1,4 +1,4 @@
-package com.ustory.relax_basic_component.core
+package com.ustory.relax_basic_component.core.base
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity

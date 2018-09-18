@@ -1,13 +1,8 @@
 package com.wangpos.kotlin_s_mvp.base
 
-import android.Manifest
 import android.os.Bundle
-import android.os.Parcel
-import android.os.Parcelable
-import android.view.View
-import com.ustory.relax_basic_component.core.BaseAppCompatActivity
+import com.ustory.relax_basic_component.core.base.BaseAppCompatActivity
 import com.wangpos.kotlin_s_mvp.base.task.SmartTaskManager
-import java.lang.reflect.ParameterizedType
 
 
 /**

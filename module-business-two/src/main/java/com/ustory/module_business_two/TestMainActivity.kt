@@ -1,9 +1,9 @@
 package com.ustory.module_business_two
 
 import android.os.Bundle
-import com.ustory.relax_basic_component.core.BaseAppCompatActivity
+import com.ustory.relax_basic_component.core.base.BaseAppCompatActivity
 
-class TestMainActivity :BaseAppCompatActivity(){
+class TestMainActivity : BaseAppCompatActivity(){
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

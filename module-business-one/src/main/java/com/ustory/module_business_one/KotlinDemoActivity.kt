@@ -1,13 +1,12 @@
 package com.ustory.module_business_one
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 import com.ustory.module_business_one.data.Person
 
-import com.ustory.relax_basic_component.core.BaseAppCompatActivity
+import com.ustory.relax_basic_component.core.base.BaseAppCompatActivity
 import kotlinx.android.synthetic.main.activity_kotlin_demo.*
 
 @Route(path = "/moudle1/KotlinDemoActivity")

@@ -1,7 +1,9 @@
-package com.ustory.relax_basic_component.mvvm
+package com.ustory.relax_basic_component.core
 
 import android.content.Context
-import com.ustory.relax_basic_component.mvvm.api.ApiClient
+import com.ustory.relax_basic_component.config.CoreConfig
+import com.ustory.relax_basic_component.core.base.BaseModel
+import com.ustory.relax_basic_component.core.base.IDataService
 import com.ustory.relax_basic_component.mvvm.executor.ExecutionThread
 import com.ustory.relax_basic_component.mvvm.executor.JobExecutor
 import com.ustory.relax_basic_component.mvvm.executor.ThreadExecutor
@@ -18,14 +20,20 @@ class CoreService(
         val appContext: Context,
         val threadExecutor: ThreadExecutor = JobExecutor(3, 5, 10, TimeUnit.SECONDS),
         val postExecutionThread: ExecutionThread = UiThread,
-        val clientConfig: ApiClient.Config
-)  {
+        val config: CoreConfig
+) {
 
+    val localService: LocalService by lazy { LocalService() }
 
-    val apiClient: ApiClient = ApiClient(clientConfig)
+    val netService: NetService by lazy { NetService() }
+
+    val dataService: IDataService = if (config.isOnline) {
+        netService
+    } else {
+        localService
+    }
 
     fun <T : BaseModel> create(factory: (CoreService) -> T): T = factory(this)
-
 
 
 }

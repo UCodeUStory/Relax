@@ -35,9 +35,9 @@ Relax is a android frame by Component Frame
 2. 支持 checkstyle,pmd,findBugs对代码静态扫描，虽然目前只支持Java检查，但开发过程中还是会用到一些Java代码和xml的检查
 3. basic-component层 添加MVVM支持
 4. basic-component层，添加MVP支持
-5. 根据配置动态选择打包MVP架构 或 MVVM架构
+5. 根据配置动态选择打包架构
 6. 封装kotlin版本的权限检查，使用更简单
-
+7. 将Application放到business-component层，因为我们要在这一层做基础业务组件开发，会全局初始化一些组件
 
 
 #### Library

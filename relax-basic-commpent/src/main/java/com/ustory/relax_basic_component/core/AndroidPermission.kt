@@ -135,26 +135,26 @@ class AndroidPermission(val builder: Builder) {
      * @param callback    结果回调
      */
     @TargetApi(Build.VERSION_CODES.M)
-    private fun requestPermissions(`object`: Any, requestCode: Int, permissions: Array<String>, callback: OnPermissionListener) {
+    private fun requestPermissions(obj: Any, requestCode: Int, permissions: Array<String>, callback: OnPermissionListener) {
 
-        checkCallingObjectSuitability(`object`)
+        checkCallingObjectSuitability(obj)
         mOnPermissionListener = callback
 
-        if (checkPermissions(getContext(`object`), *permissions)) {
+        if (checkPermissions(getContext(obj), *permissions)) {
             if (mOnPermissionListener != null)
                 mOnPermissionListener!!.onPermissionGranted()
         } else {
-            val deniedPermissions = getDeniedPermissions(getContext(`object`), *permissions)
+            val deniedPermissions = getDeniedPermissions(getContext(obj), *permissions)
             if (deniedPermissions.size > 0) {
                 mRequestCode = requestCode
-                if (`object` is Activity) {
-                    `object`.requestPermissions(deniedPermissions
+                if (obj is Activity) {
+                    obj.requestPermissions(deniedPermissions
                             .toTypedArray(), requestCode)
-                } else if (`object` is android.app.Fragment) {
-                    `object`.requestPermissions(deniedPermissions
+                } else if (obj is android.app.Fragment) {
+                    obj.requestPermissions(deniedPermissions
                             .toTypedArray(), requestCode)
-                } else if (`object` is android.support.v4.app.Fragment) {
-                    `object`.requestPermissions(deniedPermissions
+                } else if (obj is android.support.v4.app.Fragment) {
+                    obj.requestPermissions(deniedPermissions
                             .toTypedArray(), requestCode)
                 } else {
                     mRequestCode = -1
@@ -166,14 +166,14 @@ class AndroidPermission(val builder: Builder) {
     /**
      * 获取上下文
      */
-    private fun getContext(`object`: Any): Context {
+    private fun getContext(obj: Any): Context {
         val context: Context
-        if (`object` is android.app.Fragment) {
-            context = `object`.activity
-        } else if (`object` is android.support.v4.app.Fragment) {
-            context = `object`.activity
+        if (obj is android.app.Fragment) {
+            context = obj.activity
+        } else if (obj is android.support.v4.app.Fragment) {
+            context = obj.activity
         } else {
-            context = `object` as Activity
+            context = obj as Activity
         }
         return context
     }
@@ -236,14 +236,14 @@ class AndroidPermission(val builder: Builder) {
      *
      * @param object 必须为 activity or fragment
      */
-    private fun checkCallingObjectSuitability(`object`: Any?) {
-        if (`object` == null) {
+    private fun checkCallingObjectSuitability(obj: Any?) {
+        if (obj == null) {
             throw NullPointerException("Activity or Fragment should not be null")
         }
 
-        val isActivity = `object` is Activity
-        val isSupportFragment = `object` is android.support.v4.app.Fragment
-        val isAppFragment = `object` is android.app.Fragment
+        val isActivity = obj is Activity
+        val isSupportFragment = obj is android.support.v4.app.Fragment
+        val isAppFragment = obj is android.app.Fragment
 
         if (!(isActivity || isSupportFragment || isAppFragment)) {
             throw IllegalArgumentException(
