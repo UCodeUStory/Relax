@@ -5,7 +5,8 @@ import android.content.Context
 import android.os.Build
 import com.alibaba.android.arouter.launcher.ARouter
 import com.ustory.relax_basic_component.config.CoreConfig
-import com.ustory.relax_basic_component.core.CoreService
+import com.ustory.relax_business_component.core.CoreService
+import com.ustory.relax_data_componet.DataServiceManager
 
 class App : Application() {
 

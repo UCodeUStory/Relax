@@ -18,7 +18,7 @@ Relax is a android frame by Component Frame
 
 3. relax-data-component
 
-      数据层，提供业务数据，包含网络数据、本地数据，SP数据
+      数据层，提供业务数据，包含网络数据、本地数据，SP数据,
 
 4. relax-basic-component
 
