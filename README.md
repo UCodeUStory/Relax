@@ -18,7 +18,7 @@ Relax is a android frame by Component Frame
 
 3. relax-data-component
 
-      数据层，提供业务数据，包含网络数据、本地数据，SP数据,
+      数据层，提供业务数据，包含网络数据、本地数据，SP数据
 
 4. relax-basic-component
 
@@ -31,13 +31,16 @@ Relax is a android frame by Component Frame
 
 #### 项目内容
 
-1. 实现组件化，可以分层调试，单独模块调试
-2. 支持 checkstyle,pmd,findBugs对代码静态扫描，虽然目前只支持Java检查，但开发过程中还是会用到一些Java代码和xml的检查
-3. basic-component层 添加MVVM支持
-4. basic-component层，添加MVP支持
-5. 根据配置动态选择打包架构
-6. 封装kotlin版本的权限检查，使用更简单
-7. 将Application放到business-component层，因为我们要在这一层做基础业务组件开发，会全局初始化一些组件
+1. 实现组件化，可以分层调试，单独模块调试；
+2. 支持 checkstyle,pmd,findBugs对代码静态扫描，虽然目前只支持Java检查，但开发过程中还是会用到一些Java代码和xml的检查；
+3. basic-component层 添加MVVM架构支持；
+4. basic-component层，添加MVP架构支持；
+5. 根据配置动态选择打包架构；
+6. 封装kotlin版本的权限检查，使用更简单；
+7. 将Application放到business-component层，因为我们要在这一层做基础业务组件开发，会全局初始化一些组件；
+8. 封装data层接口，对外通过DataServiceManager提供统一接口(LocalDataService和NetDataService)，在Service
+内部我们可以通过Retrofit、OkHttp、Volley等来实现网络请求；
+
 
 
 #### Library
@@ -74,7 +77,6 @@ basic 添加缓存，如LRU 或RXJava  (可配置，可移除),(图片加载等)
 EventBus 添加选择性打包
 common组件是基础库，添加一些公用的类；
 例如：网络请求、图片加载、工具类、base类等等；
-声明APP需要的uses-permission；
 定义全局通用的主题（Theme）；
 
 #### 添加AOP插件
