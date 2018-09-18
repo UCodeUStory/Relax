@@ -105,10 +105,10 @@ class AndroidPermission(val builder: Builder) {
             if (AndroidPermission.mRequestCode != -1 && requestCode == AndroidPermission.mRequestCode) {
                 if (AndroidPermission.verifyPermissions(grantResults)) {
                     if (AndroidPermission.mOnPermissionListener != null)
-                        AndroidPermission.mOnPermissionListener!!.onPermissionGranted()
+                        AndroidPermission.mOnPermissionListener.onPermissionGranted()
                 } else {
                     if (AndroidPermission.mOnPermissionListener != null)
-                        AndroidPermission.mOnPermissionListener!!.onPermissionDenied()
+                        AndroidPermission.mOnPermissionListener.onPermissionDenied()
                 }
             }
         }
@@ -185,10 +185,10 @@ class AndroidPermission(val builder: Builder) {
         if (mRequestCode != -1 && requestCode == mRequestCode) {
             if (verifyPermissions(grantResults)) {
                 if (mOnPermissionListener != null)
-                    mOnPermissionListener!!.onPermissionGranted()
+                    mOnPermissionListener.onPermissionGranted()
             } else {
                 if (mOnPermissionListener != null)
-                    mOnPermissionListener!!.onPermissionDenied()
+                    mOnPermissionListener.onPermissionDenied()
             }
         }
     }
@@ -201,7 +201,7 @@ class AndroidPermission(val builder: Builder) {
                 .setTitle("提示信息")
                 .setMessage("当前应用缺少必要权限，该功能暂时无法使用。如若需要，请单击【确定】按钮前往设置中心进行权限授权。")
                 .setNegativeButton("取消", null)
-                .setPositiveButton("确定") { dialog, which -> startAppSettings(context) }.show()
+                .setPositiveButton("确定") { _, which -> startAppSettings(context) }.show()
     }
 
     /**

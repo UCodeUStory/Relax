@@ -1,7 +1,7 @@
 package com.ustory.relax_data_componet
 
+import android.database.Observable
 import com.ustory.relax_data_componet.data.MeiziResult
-import io.reactivex.Observable
 
 
 /**
@@ -9,6 +9,6 @@ import io.reactivex.Observable
  */
 interface IDataService {
 
-    fun findMeiZi(): Observable<MeiziResult>
+    fun findMeiZi():Observable<MeiziResult>
 
 }

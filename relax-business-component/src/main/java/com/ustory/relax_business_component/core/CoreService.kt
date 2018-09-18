@@ -4,8 +4,9 @@ import android.content.Context
 import com.ustory.relax_basic_component.config.CoreConfig
 import com.ustory.relax_basic_component.core.ICoreService
 import com.ustory.relax_basic_component.core.base.BaseModel
-import com.ustory.relax_data_componet.IDataService
 import com.ustory.relax_data_componet.DataServiceManager
+import com.ustory.relax_data_componet.IDataService
+
 
 /**
  * Created by qiyue on 2018/8/19.

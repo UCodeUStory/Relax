@@ -6,6 +6,7 @@ import com.ustory.relax_basic_component.mvvm.MvvmBaseActivity
 import com.ustory.relax_business_component.R
 
 import com.ustory.relax_business_component.login.viewmodel.LoginViewModel
+import com.ustory.relax_data_componet.data.Test
 import kotlinx.android.synthetic.main.login_activity.*
 
 /**
@@ -31,5 +32,7 @@ class LoginActivity: MvvmBaseActivity<LoginViewModel>() {
     }
 
     override fun initData() {
+
+        var test:Test = Test()
     }
 }
