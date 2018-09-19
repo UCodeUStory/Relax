@@ -1,7 +1,7 @@
 ### Relax
 
 <div align="center">
-<img width="380" height="654" src="https://github.com/UCodeUStory/DataStructure/blob/master/menu.png"/>
+<img width="900" height="200" src="https://github.com/UCodeUStory/Relax/blob/master/source/relax.png"/>
 </div>
 
 
