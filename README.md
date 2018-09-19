@@ -1,5 +1,10 @@
 ### Relax
 
+<p align="center">
+  <a href="javascript:;" rel="noopener" target="_blank"><img width="70%" src="https://github.com/UCodeUStory/Relax/tree/master/source/relax.png" alt="Relax logo"></a></p>
+</p>
+
+
 Relax 基于Kotlin语言编写的一套组件化框架，内部可以实现灵活的配置
 
 Relax is a android frame by Component Frame
@@ -65,28 +70,6 @@ Relax is a android frame by Component Frame
 #### 开发过程错误总结
 - [错误日志](https://github.com/UCodeUStory/Relax/tree/master/source/error_note.md)
 
-
-******************待添加内容******************
-
-business封装图片加载业务 ，config 是否开启缓存，等等
-basic实现各种图片加载库的配置
-
-business -component 添加常用业务组件，如登录，注册，友盟统计（可配置，可以不使用，不编译，使用多个文件包）
-
-####
-basic 添加缓存，如LRU 或RXJava  (可配置，可移除),(图片加载等)
-EventBus 添加选择性打包
-common组件是基础库，添加一些公用的类；
-例如：网络请求、图片加载、工具类、base类等等；
-定义全局通用的主题（Theme）；
-
-#### 添加AOP插件
-
-
-#### 编写自动打包脚本 实现自动上传指定服务器
-
-
-******************待添加内容******************
 
 
 
