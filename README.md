@@ -1,8 +1,8 @@
 ### Relax
 
-<p align="center">
-  <a href="javascript:;" rel="noopener" target="_blank"><img width="70%" src="https://github.com/UCodeUStory/Relax/tree/master/source/relax.png" alt="Relax logo"></a>
-</p>
+<div align="center">
+<img width="380" height="654" src="https://github.com/UCodeUStory/DataStructure/blob/master/menu.png"/>
+</div>
 
 
 Relax 基于Kotlin语言编写的一套组件化框架，内部可以实现灵活的配置
