@@ -38,10 +38,10 @@ android {
     sourceSets {
         main {
             java {
-                if (!isMVP.toBoolean()){
+                if (!isMVP.toBoolean()) {
                     exclude '/com.ustory.relax_basic_component.mvp/'
                 }
-                if (!isMVVM.toBoolean()){
+                if (!isMVVM.toBoolean()) {
                     exclude '/com.ustory.relax_basic_component.mvvm/'
                 }
             }
@@ -63,8 +63,6 @@ gradle.taskGraph.whenReady {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-
     def dependencies = rootProject.ext.commonDependencies
     def testDependencies = rootProject.ext.commonTestDependencies
 
@@ -86,7 +84,9 @@ dependencies {
     api dependencies.lifecycleExtensions
     kapt dependencies.lifecycleCompiler
     api dependencies.constraintLayout
-
+    if (glideEnable.toBoolean()) {
+        api dependencies.glide
+    }
     api 'com.alibaba:arouter-api:1.2.1.1'
     kapt 'com.alibaba:arouter-compiler:1.1.2.1'
 

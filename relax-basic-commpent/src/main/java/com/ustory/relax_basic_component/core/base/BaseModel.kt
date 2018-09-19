@@ -42,6 +42,14 @@ abstract class BaseModel(
         disposables.add(disposable)
     }
 
+    inline fun <reified T:ICoreService> asService(): T {
+        if (service.javaClass.simpleName.equals(T::class.java.simpleName)){
+            return service as T
+        }
+        throw RuntimeException("服务类型转换错误"+"current = "+service.javaClass.simpleName + "to target="+
+                T::class.java.simpleName);
+    }
+
 
 
 }

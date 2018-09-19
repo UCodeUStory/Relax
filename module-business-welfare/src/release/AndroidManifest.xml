@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ustory.module_business_two">
+
     <application>
-        <activity android:name="com.ustory.module_business_two.TestMainActivity"/>
-        <activity android:name="com.ustory.module_business_two.TestARouterActivity"/>
+        <activity android:name=".TestMainActivity" />
+        <activity android:name=".TestARouterActivity" />
+        <activity android:name=".view.WelfareActivity"></activity>
     </application>
+
 </manifest>

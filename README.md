@@ -39,7 +39,8 @@ Relax is a android frame by Component Frame
 6. 封装kotlin版本的权限检查，使用更简单；
 7. 将Application放到business-component层，因为我们要在这一层做基础业务组件开发，会全局初始化一些组件；
 8. 封装data层接口，对外通过DataServiceManager提供统一接口(LocalDataService和NetDataService)，在Service
-内部我们可以通过Retrofit、OkHttp、Volley等来实现网络请求；
+内部我们可以通过Retrofit、OkHttp、Volley等来实现网络请求,(项目核心使用rxjava来完成数据流，如果用其他网络框架，也尽量返回Observable,来保证封装一致性)
+9. 封装图片加载框架，通过ImageEngine对外提供加载图片引擎，通过ILoader对底层提供实现接口
 
 
 

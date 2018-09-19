@@ -54,6 +54,7 @@ ext {
     espressoCoreVersion = '3.0.1'
     runnerVersion = '1.0.1'
     arouterVersion = '1.1.2.1'
+    glideVersion = '3.7.0'
 
     commonDependencies = [
             kotlinStdlibJdk7      : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
@@ -90,6 +91,8 @@ ext {
             sunmiUiVersion        : "com.sunmi:sunmiui:${sunmiUiVersion}",
             sunmiDsLibVersion     : "com.sunmi:DS_Lib:${sunmiDsLibVersion}",
             arouter               : "com.alibaba:arouter-compiler:${arouterVersion}",
+
+            glide                 : "com.github.bumptech.glide:glide:${glideVersion}",
     ]
 
     commonTestDependencies = [

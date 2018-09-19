@@ -1,1 +1,1 @@
-include ':app', ':relax-basic-commpent', ':relax-business-component', ':relax-data-componet', ':module-business-one', ':module-business-two', ':module-business-three', ':module-business-four'
+include ':app', ':relax-basic-commpent', ':relax-business-component', ':relax-data-componet', ':module-business-one', ':module-business-welfare', ':module-business-three', ':module-business-four'
