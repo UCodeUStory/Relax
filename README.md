@@ -1,8 +1,12 @@
-### Relax
 
 <div align="center">
-<img width="900" height="200" src="https://github.com/UCodeUStory/Relax/blob/master/source/relax.png"/>
+<img width="810" height="180" src="https://github.com/UCodeUStory/Relax/blob/master/source/relax.png"/>
 </div>
+
+![Language](https://img.shields.io/badge/language-Kotlin-EE0000.svg)
+![](https://img.shields.io/badge/QQ-1483888222-green.svg)
+![SDK](https://img.shields.io/badge/SDK-14%2B-orange.svg)
+[![License](https://img.shields.io/apm/l/vim-mode.svg)](https://github.com/UCodeUStory/Relax/tree/master/LICENSE)
 
 
 Relax 基于Kotlin语言编写的一套组件化框架，内部可以实现灵活的配置
