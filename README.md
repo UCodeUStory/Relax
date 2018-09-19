@@ -1,7 +1,7 @@
 ### Relax
 
 <p align="center">
-  <a href="javascript:;" rel="noopener" target="_blank"><img width="70%" src="https://github.com/UCodeUStory/Relax/tree/master/source/relax.png" alt="Relax logo"></a></p>
+  <a href="javascript:;" rel="noopener" target="_blank"><img width="70%" src="https://github.com/UCodeUStory/Relax/tree/master/source/relax.png" alt="Relax logo"></a>
 </p>
 
 
