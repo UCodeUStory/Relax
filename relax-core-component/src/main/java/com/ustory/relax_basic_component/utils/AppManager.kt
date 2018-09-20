@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import java.util.*
 
-
 class AppManager private constructor() {
 
     companion object {

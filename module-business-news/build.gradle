@@ -1,19 +1,33 @@
-apply plugin: 'com.android.library'
+
+if (relaxBusinessNews_isApp.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 26
-
-
-
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 26
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
         versionCode 1
-        versionName "1.0"
-
+        versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        multiDexEnabled true
+        if (relaxBusinessNews_isApp.toBoolean()) {
+            applicationId "com.relax_business_two.app"
+        }
+        kapt {
+            arguments {
+                arg("moduleName", project.getName())
+            }
+        }
     }
+
 
     buildTypes {
         release {
@@ -22,13 +36,39 @@ android {
         }
     }
 
+    sourceSets {
+        main {
+            if (relaxBusinessOne_isApp.toBoolean()) {
+                manifest.srcFile 'src/debug/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/release/AndroidManifest.xml'
+            }
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
 }
 
+gradle.taskGraph.whenReady {
+    tasks.each { task ->
+        if (task.name.equals('mockableAndroidJar')) {
+            task.enabled = false
+        }
+    }
+}
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    def dependencies = rootProject.ext.commonDependencies
+    def testDependencies = rootProject.ext.commonTestDependencies
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation dependencies.appcompatV7
+    implementation testDependencies.junit
+    implementation testDependencies.espressoCore
+    implementation testDependencies.runner
+    implementation project(':relax-business-component')
+    implementation dependencies.recyclerView
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    kapt dependencies.arouter
 }

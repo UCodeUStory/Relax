@@ -22,7 +22,9 @@ Relax is a android frame by Component Frame
 
 ### 架构模式
 
-#### 1. 业务层，分解成独立的模块
+#### 1. module
+
+      业务层，分解成独立的模块
 
       module-business-news   module-business-weather   module-business-welfare   module-business-four
 
