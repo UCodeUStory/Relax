@@ -5,6 +5,7 @@ import android.content.Context
 import android.os.Build
 import com.alibaba.android.arouter.launcher.ARouter
 import com.ustory.relax_basic_component.config.CoreConfig
+import com.ustory.relax_basic_component.utils.ToastUtil
 import com.ustory.relax_business_component.core.CoreService
 import com.ustory.relax_business_component.imageloader.ImageEngine
 import com.ustory.relax_business_component.imageloader.glide.GlideLoader
@@ -13,11 +14,15 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        /** 初始化ARouter */
         ARouter.init(this)
+        /** 初始化全局context */
         context = applicationContext
-
+        /** 初始化图片引擎 */
         ImageEngine.instance.loader = GlideLoader()
-        //可以在登陆的时候动态配置
+        /** 初始化Toast工具 */
+        ToastUtil.bindContext(this)
+        /** 初始化服务 可以在登陆的时候动态配置 */
         val coreConfig = CoreConfig("hello", Build.MODEL,true)
         updateService(coreConfig)
     }

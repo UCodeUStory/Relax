@@ -14,3 +14,5 @@
 
     Execution failed for task ':module-business-two:transformClassesWithMultidexlistForDebug'.
     > com.android.build.api.transform.TransformException: Error while generating the main dex list.
+
+4. Java 迁移 kotlin时会经常遇到 nullPointer 尤其是Dialog的onCreate中onSaveInstance变量很容易就空，要添加'？'处理

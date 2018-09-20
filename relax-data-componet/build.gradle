@@ -45,5 +45,5 @@ dependencies {
     implementation testDependencies.junit
     implementation testDependencies.espressoCore
     implementation testDependencies.runner
-    api project(':relax-basic-commpent')
+    api project(':relax-core-component')
 }
