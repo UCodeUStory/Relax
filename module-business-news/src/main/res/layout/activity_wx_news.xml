@@ -6,4 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".view.WxNewsActivity">
 
+    <com.ustory.module_business_three.view.WXNewsListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.ustory.module_business_three.view.WXNewsListView>
 </android.support.constraint.ConstraintLayout>

@@ -1,7 +1,6 @@
 package com.ustory.relax
 
 import android.os.Bundle
-import com.ustory.module_business_one.KotlinDemoActivity
 import com.ustory.relax_basic_component.core.base.BaseAppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -14,8 +13,7 @@ class MainActivity : BaseAppCompatActivity() {
 
         btn_into_login.setOnClickListener {
 //            launcher(LoginActivity::class.java)
-            launcher(KotlinDemoActivity::class.java)
-
+//            launcher(KotlinDemoActivity::class.java)
 //            ARouter.getInstance().build("/moudle1/KotlinDemoActivity").navigation()
         }
 

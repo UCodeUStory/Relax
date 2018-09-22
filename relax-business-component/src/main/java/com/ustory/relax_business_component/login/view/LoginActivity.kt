@@ -4,6 +4,7 @@ import android.arch.lifecycle.Observer
 import android.widget.Toast
 import com.ustory.relax_basic_component.mvvm.MvvmBaseActivity
 import com.ustory.relax_business_component.R
+import com.ustory.relax_business_component.R.id.btnLogin
 
 import com.ustory.relax_business_component.login.viewmodel.LoginViewModel
 import kotlinx.android.synthetic.main.login_activity.*

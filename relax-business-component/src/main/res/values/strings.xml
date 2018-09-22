@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">relax-business-component</string>
+    <color name="github_title">#25292E</color>
 </resources>
