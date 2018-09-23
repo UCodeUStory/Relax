@@ -56,6 +56,12 @@ Relax is a android frame by Component Frame
 
       公共依赖集合，提供统一配置
 
+<div align="center">
+
+<img width="1050" height="800" src="https://github.com/UCodeUStory/Relax/blob/master/source/frame.png"/>
+
+</div>
+
 
 ### 项目内容
 
