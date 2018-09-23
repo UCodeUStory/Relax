@@ -7,7 +7,15 @@ import com.ustory.relax_business_component.imageloader.ImageEngine.Companion.ins
 
 
 fun ImageView.loader(url: String) {
-    instance.loader.loadImage(this, url)
+    instance.loader.loadImage(this, url,{},{})
+}
+
+fun ImageView.loader(url: String,onSuccess:()->Unit) {
+    instance.loader.loadImage(this, url,onSuccess,{})
+}
+
+fun ImageView.loader(url: String,onSuccess:()->Unit,onError:()->Unit) {
+    instance.loader.loadImage(this, url,onSuccess,onError)
 }
 
 fun ImageView.loader(@DrawableRes nativeUrl: Int) {

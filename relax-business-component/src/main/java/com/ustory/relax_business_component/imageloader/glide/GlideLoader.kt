@@ -38,7 +38,7 @@ import com.ustory.relax_business_component.imageloader.ILoader
  * @ Data:2016/3/2
  */
 class GlideLoader : ILoader {
-    override fun loadImage(view: ImageView, httpUrl: String) {
+    override fun loadImage(view: ImageView, httpUrl: String,onSuccess:()->Unit,onError:()->Unit) {
         try {
             Glide.with(view.context)
                     .load(httpUrl)
@@ -58,6 +58,8 @@ class GlideLoader : ILoader {
                 .placeholder(defaultImage)
                 .diskCacheStrategy(DiskCacheStrategy.RESULT)
                 .into(view)
+
+
     }
 
     override fun loadImage(view: ImageView, nativeResId: Int) {

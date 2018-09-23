@@ -3,7 +3,8 @@
     package="com.ustory.module_business_one">
 
     <application>
-        <activity android:name="com.ustory.module_business_one.KotlinDemoActivity"></activity>
+        <activity android:name=".KotlinDemoActivity" />
+        <activity android:name=".view.WeatherActivity"></activity>
     </application>
 
 </manifest>

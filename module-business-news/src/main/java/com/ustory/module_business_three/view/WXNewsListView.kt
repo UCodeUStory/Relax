@@ -39,7 +39,7 @@ class WXNewsListView : RecyclerView,WXListAdapter.OnClickListener {
             mAdapter!!.datas = it?.result?.list!!
             this.adapter = mAdapter
         })
-        wxNewsViewModel.findWxNews(1,20)
+        wxNewsViewModel.findWxNews(1,30)
     }
 
     override fun onClick(view: View, position: Int) {

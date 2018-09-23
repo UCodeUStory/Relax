@@ -24,7 +24,7 @@ class MeiziListAdapter : RecyclerView.Adapter<MeiziListAdapter.ItemViewHolder> {
     var mDatas: MutableList<ListBean> = mutableListOf()
     var mOtherBeans: MutableList<OtherBean> = mutableListOf()
     var mContext: Context
-
+    lateinit var mList: List<ContentlistBean>
     constructor(datas: MutableList<ContentlistBean>, context: Context) {
         this.mContext = context
         initDatas(datas)
@@ -36,14 +36,15 @@ class MeiziListAdapter : RecyclerView.Adapter<MeiziListAdapter.ItemViewHolder> {
     }
 
     override fun getItemCount(): Int {
-        return mDatas.size
+        return mList.size
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder?, position: Int) {
         val viewHolder = holder as ItemViewHolder
-        viewHolder.iv_picture.loader(mDatas.get(position).middle!!)
-        viewHolder.tv_title.setText(mOtherBeans.get(position).title)
+        viewHolder.tv_title.setText(mList[position].title)
+        viewHolder.iv_picture.loader(mList[position].list!![0].middle!!,R.drawable.error_img)
     }
+
 
     class ItemViewHolder : RecyclerView.ViewHolder {
         constructor(view: View) : super(view) {
@@ -66,16 +67,17 @@ class MeiziListAdapter : RecyclerView.Adapter<MeiziListAdapter.ItemViewHolder> {
     }
 
 
-    public fun initDatas(mList: List<ContentlistBean>) {
-        for (data in mList) {
-            //只需要创建一个,减少内存开销
-            val otherBean = OtherBean(data.title, data.ct, data.typeName)
-            for (listBean in data.list!!) {
-                //多个引用指向一个 对象
-                mDatas.add(listBean)
-                mOtherBeans.add(otherBean)
-            }
-
-        }
+    public fun initDatas(list: MutableList<ContentlistBean>) {
+        this.mList = list
+//        for (data in mList) {
+//            //只需要创建一个,减少内存开销
+//            val otherBean = OtherBean(data.title, data.ct, data.typeName)
+////            for (listBean in data.list!!) {
+//                //多个引用指向一个 对象
+////                mDatas.add(listBean)
+////                mOtherBeans.add(otherBean)
+////            }
+//
+//        }
     }
 }

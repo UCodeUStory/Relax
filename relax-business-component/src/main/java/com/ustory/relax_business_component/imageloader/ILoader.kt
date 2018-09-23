@@ -8,7 +8,7 @@ interface ILoader {
     /**
      * 加载网络图片
      */
-    fun loadImage(view: ImageView, httpUrl: String)
+    fun loadImage(view: ImageView, httpUrl: String,onSuccess:()->Unit,onError:()->Unit)
 
     /**
      * 加载网络图片，可以设置占位图

@@ -1,4 +1,4 @@
-if (relaxBusinessOne_isApp.toBoolean()) {
+if (relaxBusinessWeather_isApp.toBoolean()) {
     apply plugin: 'com.android.application'
 } else {
     apply plugin: 'com.android.library'
@@ -18,7 +18,7 @@ android {
         versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        if(relaxBusinessOne_isApp.toBoolean()){
+        if (relaxBusinessWeather_isApp.toBoolean()) {
             applicationId "com.relax_business_one.app"
         }
         multiDexEnabled true
@@ -39,7 +39,7 @@ android {
 
     sourceSets {
         main {
-            if (relaxBusinessOne_isApp.toBoolean()) {
+            if (relaxBusinessWeather_isApp.toBoolean()) {
                 manifest.srcFile 'src/debug/AndroidManifest.xml'
             } else {
                 manifest.srcFile 'src/release/AndroidManifest.xml'
@@ -69,5 +69,7 @@ dependencies {
     implementation testDependencies.espressoCore
     implementation testDependencies.runner
     implementation project(':relax-business-component')
+    implementation dependencies.constraintLayout
+    implementation dependencies.supportV4
     kapt dependencies.arouter
 }

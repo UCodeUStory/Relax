@@ -73,7 +73,6 @@ gradle.taskGraph.whenReady {
 
 
 dependencies {
-
     def dependencies = rootProject.ext.commonDependencies
     def testDependencies = rootProject.ext.commonTestDependencies
     implementation fileTree(include: ['*.jar'], dir: 'libs')
@@ -81,24 +80,24 @@ dependencies {
     implementation testDependencies.junit
     implementation testDependencies.espressoCore
     implementation testDependencies.runner
-
-//
-//    implementation project(':relax-business-component')
-
-
-//    if (!relaxBusinessComponent_isApp.toBoolean()) {
-//        implementation project(':relax-business-component')
-//    }
-//
+    implementation dependencies.design
+    implementation dependencies.constraintLayout
+    //
+    //    implementation project(':relax-business-component')
+    //    if (!relaxBusinessComponent_isApp.toBoolean()) {
+    //        implementation project(':relax-business-component')
+    //    }
+    //
     if (isApp.toBoolean()) {
         implementation project(':module-business-four')
-        implementation project(':module-business-one')
-        implementation project(':module-business-three')
-        implementation project(':module-business-two')
+        implementation project(':module-business-news')
+        implementation project(':module-business-weather')
+        implementation project(':module-business-welfare')
     }
     implementation project(':relax-business-component')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     kapt dependencies.arouter
+
 }
 repositories {
     mavenCentral()

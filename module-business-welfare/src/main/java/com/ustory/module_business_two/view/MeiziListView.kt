@@ -39,9 +39,10 @@ class MeiziListView : RecyclerView {
             if (it?.showapi_res_body!!.pagebean!!.contentlist != null) {
                 val contentlistBean = it.showapi_res_body!!.pagebean!!.contentlist
                 if (contentlistBean != null) {
-                    meiZiAdapter.initDatas(contentlistBean)
+                    meiZiAdapter.initDatas(contentlistBean as MutableList<ContentlistBean>)
+                    meiZiAdapter.notifyDataSetChanged()
                 }
-                this.adapter = meiZiAdapter
+
             }
 
         })
