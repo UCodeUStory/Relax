@@ -23,9 +23,9 @@ Relax is a android frame by Component Frame
 
 <div align="center">
 
-<img width="540" height="960" src="https://github.com/UCodeUStory/Relax/blob/master/source/tianqi.png"/>
-<img width="540" height="960" src="https://github.com/UCodeUStory/Relax/blob/master/source/meitu.png"/>
-<img width="540" height="960" src="https://github.com/UCodeUStory/Relax/blob/master/source/xinwen.png"/>
+<img width="180" height="320" src="https://github.com/UCodeUStory/Relax/blob/master/source/tianqi.jpg"/>
+<img width="180" height="320" src="https://github.com/UCodeUStory/Relax/blob/master/source/meitu.jpg"/>
+<img width="180" height="320" src="https://github.com/UCodeUStory/Relax/blob/master/source/xinwen.jpg"/>
 
 </div>
 
