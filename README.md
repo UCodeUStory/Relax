@@ -12,12 +12,22 @@
 
 </div>
 
+
 Relax 基于Kotlin语言编写的一套组件化框架，内部可以实现灵活的配置
 
 Relax is a android frame by Component Frame
 
 ### 语言
 [Kotlin 解惑(>_<) 希望我踩过的坑对你有所帮助](https://github.com/UCodeUStory/Relax/tree/master/source/kotlin.md)
+
+
+<div align="center">
+
+<img width="540" height="960" src="https://github.com/UCodeUStory/Relax/blob/master/source/tianqi.png"/>
+<img width="540" height="960" src="https://github.com/UCodeUStory/Relax/blob/master/source/meitu.png"/>
+<img width="540" height="960" src="https://github.com/UCodeUStory/Relax/blob/master/source/xinwen.png"/>
+
+</div>
 
 
 ### 架构模式

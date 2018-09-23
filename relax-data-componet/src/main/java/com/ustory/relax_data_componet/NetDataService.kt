@@ -1,8 +1,5 @@
 package com.ustory.relax_data_componet
-import com.ustory.relax_data_componet.data.JHWeatherResult
-import com.ustory.relax_data_componet.data.MeiziResult
-import com.ustory.relax_data_componet.data.WXNewsResult
-import com.ustory.relax_data_componet.data.WeatherResult
+import com.ustory.relax_data_componet.data.*
 import com.ustory.relax_data_componet.retrofit.ServiceFactory
 import com.ustory.relax_data_componet.retrofit.api.meizi.MeiziApiService
 import com.ustory.relax_data_componet.retrofit.api.news.WXNewsApiService
@@ -10,6 +7,10 @@ import com.ustory.relax_data_componet.retrofit.api.weather.WeatherApiService
 import io.reactivex.Observable
 
 class NetDataService: IDataService {
+    override fun findSimpleMeizi(page: Int): Observable<MeiZiResult2> {
+        return meiziApiService2.findMeiziPicture(page)
+    }
+
     override fun findSimpleWeather(cityName: String): Observable<WeatherResult> {
         return weatherApiService.loadSimpleWeather(cityName)
     }
@@ -27,6 +28,8 @@ class NetDataService: IDataService {
     }
 
     val meiziApiService:MeiziApiService = ServiceFactory.instance.createService(MeiziApiService::class.java, MeiziApiService.API_GET_MEIZI)
+
+    val meiziApiService2:MeiziApiService = ServiceFactory.instance.createService(MeiziApiService::class.java, MeiziApiService.API_GET_MEIZI_TWO)
 
     val wxNewsApiService:WXNewsApiService = ServiceFactory.instance.createService(WXNewsApiService::class.java,WXNewsApiService.WX_NEWS_API)
 

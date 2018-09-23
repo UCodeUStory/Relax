@@ -35,18 +35,27 @@ class MeiziListView : RecyclerView {
 
         val welfareViewModel = ViewModelProviders.of(context as AppCompatActivity).get(WelfareViewModel::class.java)
 
-        welfareViewModel.meiziResult.observe(context as AppCompatActivity, Observer {
-            if (it?.showapi_res_body!!.pagebean!!.contentlist != null) {
-                val contentlistBean = it.showapi_res_body!!.pagebean!!.contentlist
-                if (contentlistBean != null) {
-                    meiZiAdapter.initDatas(contentlistBean as MutableList<ContentlistBean>)
-                    meiZiAdapter.notifyDataSetChanged()
-                }
+//        welfareViewModel.meiziResult.observe(context as AppCompatActivity, Observer {
+//            if (it?.showapi_res_body!!.pagebean!!.contentlist != null) {
+//                val contentlistBean = it.showapi_res_body!!.pagebean!!.contentlist
+//                if (contentlistBean != null) {
+//                    meiZiAdapter.initDatas(contentlistBean as MutableList<ContentlistBean>)
+//                    meiZiAdapter.notifyDataSetChanged()
+//                }
+//
+//            }
+//
+//        })
+//        welfareViewModel.findMeiZi(1, "4009")
 
+        welfareViewModel.meiziResult2.observe(context as AppCompatActivity, Observer {
+            if(it?.data!=null && (it?.data?.size !=0)){
+
+                meiZiAdapter.initDatas2(it.data!!)
+                meiZiAdapter.notifyDataSetChanged()
             }
-
         })
-        welfareViewModel.findMeiZi(1, "4009")
+        welfareViewModel.findMeiZiTwo(1)
 
     }
 

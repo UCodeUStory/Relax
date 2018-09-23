@@ -1,5 +1,6 @@
 package com.ustory.relax_data_componet.retrofit.api.meizi
 
+import com.ustory.relax_data_componet.data.MeiZiResult2
 import com.ustory.relax_data_componet.data.MeiziResult
 import io.reactivex.Observable
 import retrofit2.http.GET
@@ -18,6 +19,8 @@ interface MeiziApiService {
 
         val API_GET_MEIZI = "http://route.showapi.com/"
 
+        val API_GET_MEIZI_TWO = "https://www.apiopen.top/"
+
 
 //        val APP_ID = "69382";
 
@@ -31,6 +34,10 @@ interface MeiziApiService {
 
         val secret_4 = ""
     }
+
+
+    @GET("meituApi")
+    fun findMeiziPicture(@Query("page") page:Int):Observable<MeiZiResult2>
 
 
 }

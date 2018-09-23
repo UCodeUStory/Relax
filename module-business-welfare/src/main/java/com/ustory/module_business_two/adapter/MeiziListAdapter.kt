@@ -15,6 +15,7 @@ import com.ustory.module_business_two.R
 import com.ustory.module_business_two.data.OtherBean
 import com.ustory.module_business_two.widget.FitXYImageView
 import com.ustory.relax_business_component.imageloader.loader
+import com.ustory.relax_data_componet.data.MeiZiResult2
 import com.ustory.relax_data_componet.data.MeiziResult.ShowapiResBodyBean.PagebeanBean.ContentlistBean
 import com.ustory.relax_data_componet.data.MeiziResult.ShowapiResBodyBean.PagebeanBean.ContentlistBean.ListBean
 
@@ -24,7 +25,7 @@ class MeiziListAdapter : RecyclerView.Adapter<MeiziListAdapter.ItemViewHolder> {
     var mDatas: MutableList<ListBean> = mutableListOf()
     var mOtherBeans: MutableList<OtherBean> = mutableListOf()
     var mContext: Context
-    lateinit var mList: List<ContentlistBean>
+    var mList: List<MeiZiResult2.DataBean> = mutableListOf()
     constructor(datas: MutableList<ContentlistBean>, context: Context) {
         this.mContext = context
         initDatas(datas)
@@ -41,8 +42,11 @@ class MeiziListAdapter : RecyclerView.Adapter<MeiziListAdapter.ItemViewHolder> {
 
     override fun onBindViewHolder(holder: ItemViewHolder?, position: Int) {
         val viewHolder = holder as ItemViewHolder
-        viewHolder.tv_title.setText(mList[position].title)
-        viewHolder.iv_picture.loader(mList[position].list!![0].middle!!,R.drawable.error_img)
+//        viewHolder.tv_title.setText(mList[position].title)
+//        viewHolder.iv_picture.loader(mList[position].list!![0].middle!!,R.drawable.error_img)
+
+//          viewHolder.tv_title.text = mList[position].
+        viewHolder.iv_picture.loader(mList[position].url!!)
     }
 
 
@@ -68,7 +72,7 @@ class MeiziListAdapter : RecyclerView.Adapter<MeiziListAdapter.ItemViewHolder> {
 
 
     public fun initDatas(list: MutableList<ContentlistBean>) {
-        this.mList = list
+//        this.mList = list
 //        for (data in mList) {
 //            //只需要创建一个,减少内存开销
 //            val otherBean = OtherBean(data.title, data.ct, data.typeName)
@@ -79,5 +83,9 @@ class MeiziListAdapter : RecyclerView.Adapter<MeiziListAdapter.ItemViewHolder> {
 ////            }
 //
 //        }
+    }
+
+    fun initDatas2(data: List<MeiZiResult2.DataBean>) {
+        this.mList = data
     }
 }
