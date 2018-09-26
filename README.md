@@ -56,9 +56,11 @@ Relax is a android frame by Component Frame
 
       公共依赖集合，提供统一配置
 
+### 架构图
+
 <div align="center">
 
-<img width="1050" height="800" src="https://github.com/UCodeUStory/Relax/blob/master/source/frame.png"/>
+<img width="1050" height="800" src="https://github.com/UCodeUStory/Relax/blob/master/source/new_frame.png"/>
 
 </div>
 
@@ -75,8 +77,8 @@ Relax is a android frame by Component Frame
 #### 8. 封装data层接口，对外通过DataServiceManager提供统一接口(LocalDataService和NetDataService)，在Service
 内部我们可以通过Retrofit、OkHttp、Volley等来实现网络请求,(项目核心使用rxjava来完成数据流，如果用其他网络框架，也尽量返回Observable,来保证封装一致性)
 #### 9. 封装图片加载框架，通过ImageEngine对外提供加载图片引擎，通过ILoader对底层提供实现接口
+#### 10. 封装插件化框架通过PluginManager进行管理插件
 
-### 架构图
 
 ### Library
 
