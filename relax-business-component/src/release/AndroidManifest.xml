@@ -6,7 +6,10 @@
         android:allowBackup="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
     </application>
+
+
 </manifest>
 
 

@@ -1,1 +1,1 @@
-include ':app', ':relax-core-component', ':relax-business-component', ':relax-data-componet', ':module-business-weather', ':module-business-welfare', ':module-business-news', ':module-business-four'
+include ':app', ':relax-core-component', ':relax-business-component', ':relax-data-componet', ':module-business-weather', ':module-business-welfare', ':module-business-news', ':module-business-plugin'
