@@ -83,22 +83,59 @@ Relax is a android frame by Component Frame
 
       例子：module-business-plugin模块就是用插件化实现的，具体插件式项目中的RelaxPluginDemo
 
-### Library
 
-1. [RxJava](https://github.com/ReactiveX/RxJava)
-2. [Retrofit](https://github.com/square/retrofit)
-3. [LifeCycle]()
-4. [LiveData]()
-5. [ViewModel]()
-6. [ARouter](https://github.com/alibaba/ARouter)
-7. [EventBus](http://greenrobot.org/eventbus/)
-8. [Dagger](https://google.github.io/dagger/android)
-9. [OKHttp](https://github.com/square/okhttp)
-10. [GSON](https://github.com/google/gson)
-11. [Glide](https://github.com/bumptech/glide)
-12. [LeakCanary](https://github.com/square/leakcanary)
-13. [Aspect](http://mvnrepository.com/artifact/org.aspectj/aspectjtools)
+Libraries Used
+--------------
 
+  * [Lifecycles][12] - Create a UI that automatically responds to lifecycle events.
+  * [LiveData][13] - Build data objects that notify views when the underlying database changes.
+  * [Navigation][14] - Handle everything needed for in-app navigation.
+  * [Room][16] - Access your app's SQLite database with in-app objects and compile-time checks.
+  * [ViewModel][17] - Store UI-related data that isn't destroyed on app rotations. Easily schedule
+     asynchronous tasks for optimal execution.
+  * [WorkManager][18] - Manage your Android background jobs.
+* [UI][30] - Details on why and how to use UI Components in your apps - together or separate
+  * [Animations & Transitions][31] - Move widgets and transition between screens.
+  * [Fragment][34] - A basic unit of composable UI.
+  * [Layout][35] - Lay out widgets using different algorithms.
+* Third party
+  * [Glide][90] for image loading
+  * [Rxjava][91]  for Reactive Programming
+  * [ARouter][92]   A framework for assisting in the renovation of Android app componentization
+  * [Retrofit][93] A restful client
+  * [EventBus][94] An Android event publish/subscribe lightweight framework
+  * [Dagger][95] a fully static, compile-time dependency injection framework for both Java and Android.
+  * [GSON][97] Tool class for converting Java objects to Json strings and Json strings to objects
+  * [LeakCannary][99] Is the main tool for Android to find memory leaks.
+  * [Aspect][100] optimize your contact center performance through improved customer service and efficiency.
+
+[0]: https://developer.android.com/jetpack/foundation/
+[1]: https://developer.android.com/topic/libraries/support-library/packages#v7-appcompat
+[2]: https://developer.android.com/kotlin/ktx
+[4]: https://developer.android.com/training/testing/
+[10]: https://developer.android.com/jetpack/arch/
+[11]: https://developer.android.com/topic/libraries/data-binding/
+[12]: https://developer.android.com/topic/libraries/architecture/lifecycle
+[13]: https://developer.android.com/topic/libraries/architecture/livedata
+[14]: https://developer.android.com/topic/libraries/architecture/navigation/
+[16]: https://developer.android.com/topic/libraries/architecture/room
+[17]: https://developer.android.com/topic/libraries/architecture/viewmodel
+[18]: https://developer.android.com/topic/libraries/architecture/workmanager
+[30]: https://developer.android.com/jetpack/ui/
+[31]: https://developer.android.com/training/animation/
+[34]: https://developer.android.com/guide/components/fragments
+[35]: https://developer.android.com/guide/topics/ui/declaring-layout
+[90]: https://bumptech.github.io/glide/
+[91]: https://github.com/ReactiveX/RxJava
+[92]: https://github.com/alibaba/ARouter
+[93]: https://github.com/square/retrofit
+[94]: http://greenrobot.org/eventbus/
+[95]: https://google.github.io/dagger/android
+[96]: https://github.com/square/okhttp
+[97]: https://github.com/google/gson
+[98]: https://github.com/bumptech/glide
+[99]: https://github.com/square/leakcanary
+[100]: http://mvnrepository.com/artifact/org.aspectj/aspectjtools
 
 
 ### 开发过程错误总结
