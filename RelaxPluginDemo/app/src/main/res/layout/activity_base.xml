@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFF0"
+    android:orientation="vertical"
+    tools:context=".PluginBaseActivity">
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="match_parent"
+        android:text="我插件里界面"
+        android:textSize="17sp"
+        android:textColor="#363535"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_height="wrap_content" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:listSelector="@drawable/list_select"
+        android:layout_height="match_parent"></ListView>
+
+</LinearLayout>

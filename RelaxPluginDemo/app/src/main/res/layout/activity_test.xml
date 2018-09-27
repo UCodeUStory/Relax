@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wangpos.pluginapkdemo.TestActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/test"
+        android:scaleType="centerCrop"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="100dp"
+        android:text="跳转"
+        android:layout_centerInParent="true"
+        android:layout_height="50dp" />
+</RelativeLayout>

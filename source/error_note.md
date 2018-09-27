@@ -18,3 +18,6 @@
 4. Java 迁移 kotlin时会经常遇到 nullPointer 尤其是Dialog的onCreate中onSaveInstance变量很容易就空，要添加'？'处理
 
 5. 当Java 的RecyclerAdapter转Kotlin时会遇到很多错误，其中我们要把ViewHolder 前面" internal inner "去掉
+
+6. 插件化开发，注意插件的包名要和Iplugin所在的目录一致，例如：com.ustory.relax_business_component.plugin.inter，后期会优化这个包名让其变得尽量短一些
+
