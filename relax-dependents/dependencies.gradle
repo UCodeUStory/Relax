@@ -56,6 +56,7 @@ ext {
     runnerVersion = '1.0.1'
     arouterVersion = '1.1.2.1'
     glideVersion = '3.7.0'
+    koinVersion = '1.0.1'
 
     commonDependencies = [
             kotlinStdlibJdk7      : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
@@ -95,6 +96,7 @@ ext {
 
             glide                 : "com.github.bumptech.glide:glide:${glideVersion}",
             design                : "com.android.support:design:${designVersion}",
+            koin                  : "org.koin:koin-android-viewmodel:${koinVersion}",
     ]
 
     commonTestDependencies = [

@@ -71,6 +71,5 @@ dependencies {
     implementation dependencies.recyclerView
     implementation dependencies.constraintLayout
     implementation dependencies.supportV4
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     kapt dependencies.arouter
 }

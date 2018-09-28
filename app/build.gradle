@@ -82,12 +82,7 @@ dependencies {
     implementation testDependencies.runner
     implementation dependencies.design
     implementation dependencies.constraintLayout
-    //
-    //    implementation project(':relax-business-component')
-    //    if (!relaxBusinessComponent_isApp.toBoolean()) {
-    //        implementation project(':relax-business-component')
-    //    }
-    //
+
     if (isApp.toBoolean()) {
         implementation project(':module-business-plugin')
         implementation project(':module-business-news')
@@ -95,7 +90,6 @@ dependencies {
         implementation project(':module-business-welfare')
     }
     implementation project(':relax-business-component')
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     kapt dependencies.arouter
 
 }
