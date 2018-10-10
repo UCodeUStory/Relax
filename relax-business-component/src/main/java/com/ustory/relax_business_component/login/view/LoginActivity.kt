@@ -2,7 +2,7 @@ package com.ustory.relax_business_component.login.view
 
 import android.arch.lifecycle.Observer
 import android.widget.Toast
-import com.ustory.relax_basic_component.mvvm.MvvmBaseActivity
+import com.mvvm.MvvmBaseActivity
 import com.ustory.relax_business_component.R
 import com.ustory.relax_business_component.R.id.btnLogin
 

@@ -2,7 +2,7 @@ package com.ustory.module_business_two
 
 import android.arch.lifecycle.Observer
 import com.ustory.module_business_two.viewmodel.WelfareViewModel
-import com.ustory.relax_basic_component.mvvm.MvvmBaseActivity
+import com.mvvm.MvvmBaseActivity
 
 class TestMainActivity : MvvmBaseActivity<WelfareViewModel>() {
     override val layoutId: Int

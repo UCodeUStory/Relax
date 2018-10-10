@@ -42,7 +42,11 @@ Relax is a android frame by Component Frame
 
 #### 2. relax-business-component
 
-      基础业务层，如地图封装、IM封装、日志上传封装、友盟统计封装、Bugly封装
+      基础业务层和可变的第三方业务(比如地图封装、IM封装、日志上传封装、友盟统计封装、Bugly封装，这些业务我们
+      情景1：可能实现方式会变(如图片加载之前用glide，现在想用Fresco,所以通过接口统一实现；
+      情景2：有些业务可能在不同的App宿主中不需要，所以提供动态配置来减少安装包体积))
+      所以针对第三方业务实现，通过分别实现不同的依赖库封装在BusinessFactory中，同时通过factoryinterface提供
+      统一接口
 
 #### 3. relax-data-component
 

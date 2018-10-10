@@ -2,7 +2,7 @@ package com.ustory.module_business_three.view
 
 import com.ustory.module_business_three.R
 import com.ustory.module_business_three.viewmodel.WxNewsViewModel
-import com.ustory.relax_basic_component.mvvm.MvvmBaseActivity
+import com.mvvm.MvvmBaseActivity
 
 class WxNewsActivity : MvvmBaseActivity<WxNewsViewModel>() {
     override val layoutId: Int

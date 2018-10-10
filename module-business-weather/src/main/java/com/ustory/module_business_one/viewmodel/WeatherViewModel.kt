@@ -2,7 +2,7 @@ package com.ustory.module_business_one.viewmodel
 
 import android.arch.lifecycle.MutableLiveData
 import com.ustory.module_business_one.model.WeatherModel
-import com.ustory.relax_basic_component.mvvm.BaseVM
+import com.mvvm.BaseVM
 import com.ustory.relax_business_component.app.App
 import com.ustory.relax_data_componet.data.JHWeatherResult
 import com.ustory.relax_data_componet.data.WeatherResult

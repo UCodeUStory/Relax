@@ -34,21 +34,14 @@ android {
         abortOnError false
     }
 
-
-
     sourceSets {
-        main {
-            java {
-                if (!isMVP.toBoolean()) {
-                    exclude 'com/ustory/relax_basic_component/mvp/**'
-                }
-                if (!isMVVM.toBoolean()) {
-                    exclude 'com/ustory/relax_basic_component/mvvm/'
-                }
-            }
+        if (isMVVM.toBoolean()) {
+            main.java.srcDirs = ['src/main/java/com/ustory', 'src/main/java/com/mvvm']
+        } else if (isMVP.toBoolean()) {
+            main.java.srcDirs = ['src/main/java/com/ustory', 'src/main/java/com/mvp']
         }
-    }
 
+    }
 
 }
 
