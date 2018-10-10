@@ -1,1 +1,1 @@
-include ':app', ':relax-core-component', ':relax-business-component', ':relax-data-componet', ':module-business-weather', ':module-business-welfare', ':module-business-news', ':module-business-plugin', ':BusinessFactory:glidebusiness',  ':BusinessFactory:factoryinterface'
+include ':app', ':relax-core-component', ':relax-business-component', ':relax-data-componet', ':module-business-weather', ':module-business-welfare', ':module-business-news', ':module-business-plugin', ':BusinessFactory:glidebusiness',  ':BusinessFactory:factoryinterface', ':BusinessFactory:picassobusiness'

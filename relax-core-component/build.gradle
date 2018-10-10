@@ -81,6 +81,9 @@ dependencies {
     if (glideEnable.toBoolean()) {
         api dependencies.glide
     }
+    if (picassoEnable.toBoolean()){
+        api dependencies.picasso
+    }
     api 'com.alibaba:arouter-api:1.2.1.1'
     kapt 'com.alibaba:arouter-compiler:1.1.2.1'
 

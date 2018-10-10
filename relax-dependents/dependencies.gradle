@@ -45,6 +45,7 @@ ext {
     flowLayoutVersion = '1.1.0'
     // Misc
     frescoVersion = '1.5.0'
+    picassoVersion = '2.71828'
     zxingAndroidEmbeddedVersion = '3.5.0'
     // Pos
     sunmiUiVersion = '1.1.22'
@@ -86,6 +87,7 @@ ext {
             flowLayout            : "com.nex3z:flow-layout:${flowLayoutVersion}",
             zxingAndroidEmbedded  : "com.journeyapps:zxing-android-embedded:${zxingAndroidEmbeddedVersion}",
             fresco                : "com.facebook.fresco:fresco:${frescoVersion}",
+            picasso               : "com.squareup.picasso:picasso:${picassoVersion}",
 
             timber                : "com.jakewharton.timber:timber:${timberVersion}",
             crashReport           : "com.tencent.bugly:crashreport:${crashReportVersion}",

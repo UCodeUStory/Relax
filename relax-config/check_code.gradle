@@ -2,8 +2,9 @@
 apply plugin: 'findbugs'
 apply plugin: 'checkstyle'
 apply plugin: 'pmd'
-
-assemble.dependsOn 'checkstyle'
+if (isCheckCode.toBoolean()){
+    assemble.dependsOn 'checkstyle'
+}
 
 task checkstyle(type: Checkstyle,dependsOn:'pmd') {
     source '../app/src','../relax-business-component/src','../relax-data-componet/src','../relax-basic-commpent/src'
