@@ -3,7 +3,7 @@ package com.ustory.relax_basic_component.core.base
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
-import com.wangpos.kotlin_s_mvp.base.AndroidPermission
+import com.ustory.relax_basic_component.core.AndroidPermission
 
 open class BaseAppCompatActivity : AppCompatActivity() {
 

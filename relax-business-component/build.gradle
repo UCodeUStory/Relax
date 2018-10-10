@@ -60,4 +60,9 @@ dependencies {
     implementation testDependencies.espressoCore
     implementation testDependencies.runner
     api project(':relax-data-componet')
+    implementation project(':BusinessFactory:factoryinterface')
+    if (glideEnable.toBoolean()) {
+        implementation project(':BusinessFactory:glidebusiness')
+    }
+
 }

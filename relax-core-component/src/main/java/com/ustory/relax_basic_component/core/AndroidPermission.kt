@@ -1,4 +1,4 @@
-package com.wangpos.kotlin_s_mvp.base
+package com.ustory.relax_basic_component.core
 
 import android.annotation.TargetApi
 import android.app.Activity

@@ -1,4 +1,4 @@
-package com.wangpos.kotlin_s_mvp.base.task
+package com.ustory.relax_basic_component.mvp.task
 
 import android.os.Handler
 import android.os.Looper

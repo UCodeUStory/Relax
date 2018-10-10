@@ -1,8 +1,8 @@
-package com.wangpos.kotlin_s_mvp.base
+package com.ustory.relax_basic_component.mvp
 
 import android.os.Bundle
 import com.ustory.relax_basic_component.core.base.BaseAppCompatActivity
-import com.wangpos.kotlin_s_mvp.base.task.SmartTaskManager
+import com.ustory.relax_basic_component.mvp.task.SmartTaskManager
 
 
 /**

@@ -4,11 +4,11 @@ import android.app.Application
 import android.content.Context
 import android.os.Build
 import com.alibaba.android.arouter.launcher.ARouter
+import com.ustory.glidebusiness.GlideLoader
 import com.ustory.relax_basic_component.config.CoreConfig
 import com.ustory.relax_basic_component.utils.ToastUtil
 import com.ustory.relax_business_component.core.CoreService
 import com.ustory.relax_business_component.imageloader.ImageEngine
-import com.ustory.relax_business_component.imageloader.glide.GlideLoader
 
 class App : Application() {
 

@@ -21,3 +21,5 @@
 
 6. 插件化开发，注意插件的包名要和Iplugin所在的目录一致，例如：com.ustory.relax_business_component.plugin.inter，后期会优化这个包名让其变得尽量短一些
 
+7. 当新建一个module时候，被其他module引用找不到类，这种时候有可能是没有加apply plugin: 'kotlin-android'
+

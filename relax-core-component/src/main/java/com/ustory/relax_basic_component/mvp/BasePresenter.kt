@@ -1,4 +1,4 @@
-package com.wangpos.kotlin_s_mvp.base
+package com.ustory.relax_basic_component.mvp
 
 /**
  * Created by qiyue on 2018/3/12.

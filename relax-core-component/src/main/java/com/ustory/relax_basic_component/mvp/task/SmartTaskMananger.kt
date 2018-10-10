@@ -1,9 +1,6 @@
-package com.wangpos.kotlin_s_mvp.base.task
-
+package com.ustory.relax_basic_component.mvp.task
 import android.util.Log
-import java.util.HashMap
-
-
+import java.util.*
 /**
  * Created by qiyue on 2017/12/22.
  *

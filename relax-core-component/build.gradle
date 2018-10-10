@@ -35,14 +35,15 @@ android {
     }
 
 
+
     sourceSets {
         main {
             java {
                 if (!isMVP.toBoolean()) {
-                    exclude '/com.ustory.relax_basic_component.mvp/'
+                    exclude 'com/ustory/relax_basic_component/mvp/**'
                 }
                 if (!isMVVM.toBoolean()) {
-                    exclude '/com.ustory.relax_basic_component.mvvm/'
+                    exclude 'com/ustory/relax_basic_component/mvvm/'
                 }
             }
         }
