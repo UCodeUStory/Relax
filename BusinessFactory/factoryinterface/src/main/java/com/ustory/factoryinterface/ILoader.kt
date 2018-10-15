@@ -1,6 +1,6 @@
 package com.ustory.factoryinterface
 
-import android.annotation.DrawableRes
+import android.support.annotation.DrawableRes
 import android.widget.ImageView
 
 interface ILoader {

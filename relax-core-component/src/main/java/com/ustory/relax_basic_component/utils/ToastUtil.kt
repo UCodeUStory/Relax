@@ -1,7 +1,7 @@
 package com.ustory.relax_basic_component.utils
 
-import android.annotation.StringRes
 import android.content.Context
+import android.support.annotation.StringRes
 import android.widget.Toast
 
 object ToastUtil { // 对象声明

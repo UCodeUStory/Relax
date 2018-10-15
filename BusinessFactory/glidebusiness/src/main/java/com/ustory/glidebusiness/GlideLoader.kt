@@ -24,8 +24,8 @@
 
 package com.ustory.glidebusiness
 
-import android.annotation.DrawableRes
 import android.app.Activity
+import android.support.annotation.DrawableRes
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
@@ -63,10 +63,7 @@ class GlideLoader:ILoader {
     }
 
     override fun loadImage(view: ImageView, nativeResId: Int) {
-        // 不能崩
-        if (view == null) {
-            return
-        }
+
         val context = view.context
         // View你还活着吗？
         if (context is Activity) {

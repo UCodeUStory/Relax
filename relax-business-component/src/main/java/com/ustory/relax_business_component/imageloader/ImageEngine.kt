@@ -1,6 +1,6 @@
 package com.ustory.relax_business_component.imageloader
 
-import android.annotation.DrawableRes
+import android.support.annotation.DrawableRes
 import android.widget.ImageView
 import com.ustory.factoryinterface.ILoader
 import com.ustory.relax_business_component.imageloader.ImageEngine.Companion.instance

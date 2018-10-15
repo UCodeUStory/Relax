@@ -14,6 +14,7 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
+
         /** 初始化ARouter */
         ARouter.init(this)
         /** 初始化全局context */
@@ -25,6 +26,8 @@ class App : Application() {
         /** 初始化服务 可以在登陆的时候动态配置 */
         val coreConfig = CoreConfig("hello", Build.MODEL,true)
         updateService(coreConfig)
+
+
     }
 
     companion object {

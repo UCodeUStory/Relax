@@ -21,7 +21,6 @@ import com.ustory.relax_data_componet.data.MeiziResult.ShowapiResBodyBean.Pagebe
 
 
 class MeiziListAdapter : RecyclerView.Adapter<MeiziListAdapter.ItemViewHolder> {
-
     var mDatas: MutableList<ListBean> = mutableListOf()
     var mOtherBeans: MutableList<OtherBean> = mutableListOf()
     var mContext: Context
@@ -39,16 +38,10 @@ class MeiziListAdapter : RecyclerView.Adapter<MeiziListAdapter.ItemViewHolder> {
     override fun getItemCount(): Int {
         return mList.size
     }
-
-    override fun onBindViewHolder(holder: ItemViewHolder?, position: Int) {
+    override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val viewHolder = holder as ItemViewHolder
-//        viewHolder.tv_title.setText(mList[position].title)
-//        viewHolder.iv_picture.loader(mList[position].list!![0].middle!!,R.drawable.error_img)
-
-//          viewHolder.tv_title.text = mList[position].
         viewHolder.iv_picture.loader(mList[position].url!!)
     }
-
 
     class ItemViewHolder : RecyclerView.ViewHolder {
         constructor(view: View) : super(view) {

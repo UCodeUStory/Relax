@@ -16,7 +16,7 @@ class MainViewPagerAdapter (val fm: FragmentManager,var datas:MutableList<Fragme
       return datas[position]
     }
 
-    override fun instantiateItem(container: ViewGroup?, position: Int): Any {
+    override fun instantiateItem(container: ViewGroup, position: Int): Any {
         return super.instantiateItem(container, position)
     }
 

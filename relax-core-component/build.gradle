@@ -78,6 +78,14 @@ dependencies {
     api dependencies.lifecycleExtensions
     kapt dependencies.lifecycleCompiler
     api dependencies.constraintLayout
+
+    //koin
+    api dependencies.koinAndroid
+    api dependencies.koinAndroidScope
+    api dependencies.koinViewModel
+    api dependencies.kotlinReflect
+    api dependencies.koin
+
     if (glideEnable.toBoolean()) {
         api dependencies.glide
     }

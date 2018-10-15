@@ -77,6 +77,7 @@ dependencies {
     def testDependencies = rootProject.ext.commonTestDependencies
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation dependencies.appcompatV7
+    implementation dependencies.supportV4
     implementation testDependencies.junit
     implementation testDependencies.espressoCore
     implementation testDependencies.runner
