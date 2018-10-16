@@ -18,7 +18,7 @@ Relax 基于Kotlin语言编写的一套组件化框架，内部可以实现灵�
 Relax is a android frame by Component Frame
 
 ### 语言
-[Kotlin 解惑(>_<) 希望我踩过的坑对你有所帮助](https://github.com/UCodeUStory/Relax/tree/master/source/kotlin.md)
+[Kotlin 学习笔记、里面是我踩过的各种坑(>_<) ](https://github.com/UCodeUStory/Relax/tree/master/source/kotlin.md)
 
 
 <div align="center">
@@ -60,6 +60,25 @@ Relax is a android frame by Component Frame
 
       公共依赖集合，提供统一配置
 
+#### 统一配置gradle.properties
+
+    ### 库和应用两种模式间切换
+    ### 只有app 为false 其他模块才可以设置true
+    relaxBusinessPlugin_isApp = false
+    relaxBusinessNews_isApp = false
+    relaxBusinessWeather_isApp = true
+    relaxBusinessWelfare_isApp = false
+    relaxBusinessComponent_isApp= false
+    ### 启用检查代码 启用会牺牲打包时间
+    isCheckCode = false
+    ### 动态配置减少打包体积
+    glideEnable = true
+    picassoEnable = false
+    isMVVM = true
+    isMVP = false
+    isApp = false
+
+
 ### 架构图
 
 <div align="center">
@@ -67,6 +86,7 @@ Relax is a android frame by Component Frame
 <img width="1050" height="800" src="https://github.com/UCodeUStory/Relax/blob/master/source/new_frame.png"/>
 
 </div>
+
 
 
 ### 项目内容
@@ -86,6 +106,7 @@ Relax is a android frame by Component Frame
 #### 10. 封装插件化框架通过PluginManager进行管理插件
 
       例子：module-business-plugin模块就是用插件化实现的，具体插件式项目中的RelaxPluginDemo
+
 
 
 Libraries Used
