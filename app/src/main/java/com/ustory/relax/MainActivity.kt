@@ -7,6 +7,7 @@ import com.ustory.module_business_one.view.WeatherFragment
 import com.ustory.module_business_three.view.WxNewsFragment
 import com.ustory.module_business_two.view.WelfareFragment
 import com.ustory.relax.adapter.MainViewPagerAdapter
+import com.ustory.relax_basic_component.core.AndroidPermission
 import com.ustory.relax_basic_component.core.base.BaseAppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -28,6 +29,12 @@ class MainActivity : BaseAppCompatActivity(){
         viewpager_main.adapter = MainViewPagerAdapter(supportFragmentManager ,datas,titles)
         tl_main.setupWithViewPager(viewpager_main)
 
+
+//        AndroidPermission.build {
+//            requestCode()
+//            requestPermission()
+//            onPermissionGranted(mGrantCallBack)
+//        }
 
 
     }
