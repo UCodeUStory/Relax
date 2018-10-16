@@ -60,7 +60,7 @@ Relax is a android frame by Component Frame
 
       公共依赖集合，提供统一配置
 
-#### 统一配置gradle.properties
+#### 6. 统一配置gradle.properties
 
     ### 库和应用两种模式间切换
     ### 只有app 为false 其他模块才可以设置true
@@ -107,6 +107,7 @@ Relax is a android frame by Component Frame
 
       例子：module-business-plugin模块就是用插件化实现的，具体插件式项目中的RelaxPluginDemo
 
+#### 11. 引入koin来解决kotlin依赖注入，更加方面，里面没有反射、代码生成
 
 
 Libraries Used
@@ -133,6 +134,7 @@ Libraries Used
   * [GSON][97] Tool class for converting Java objects to Json strings and Json strings to objects
   * [LeakCannary][99] Is the main tool for Android to find memory leaks.
   * [Aspect][100] optimize your contact center performance through improved customer service and efficiency.
+  * [Koin][101] A pragmatic lightweight dependency injection framework for Kotlin developers. Written in pure Kotlin using functional resolution only: no proxy, no code generation, no reflection!
 
 [0]: https://developer.android.com/jetpack/foundation/
 [1]: https://developer.android.com/topic/libraries/support-library/packages#v7-appcompat
@@ -161,6 +163,7 @@ Libraries Used
 [98]: https://github.com/bumptech/glide
 [99]: https://github.com/square/leakcanary
 [100]: http://mvnrepository.com/artifact/org.aspectj/aspectjtools
+[101]:https://insert-koin.io/
 
 
 ### 开发过程错误总结
