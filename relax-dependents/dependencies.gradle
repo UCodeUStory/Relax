@@ -58,6 +58,7 @@ ext {
     arouterVersion = '1.1.2.1'
     glideVersion = '3.7.0'
     koinVersion = '1.0.1'
+    leakCanaryVersion = '1.6.2'
 
     commonDependencies = [
             kotlinStdlibJdk7      : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
@@ -103,6 +104,9 @@ ext {
             koinAndroidScope      : "org.koin:koin-android-scope:${koinVersion}",
             koinViewModel         : "org.koin:koin-android-viewmodel:${koinVersion}",
             kotlinReflect         : "org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}",
+            debugleakCanary       : "com.squareup.leakcanary:leakcanary-android:${leakCanaryVersion}",
+            releaseleakCanary     : "com.squareup.leakcanary:leakcanary-android-no-op:${leakCanaryVersion}"
+
     ]
 
     commonTestDependencies = [

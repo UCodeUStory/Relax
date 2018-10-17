@@ -11,8 +11,8 @@
         android:icon="@drawable/relax_icon"
         android:label="@string/app_name"
         android:name="com.ustory.relax_business_component.app.App"
-        tools:replace="android:icon,android:label,android:theme"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        tools:replace="android:icon,android:label,android:theme,android:roundIcon"
+        android:roundIcon="@drawable/relax_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity"
