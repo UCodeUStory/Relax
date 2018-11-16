@@ -51,6 +51,7 @@ gradle.taskGraph.whenReady {
         }
     }
 }
+
 dependencies {
     def dependencies = rootProject.ext.commonDependencies
     def testDependencies = rootProject.ext.commonTestDependencies
@@ -64,7 +65,6 @@ dependencies {
     if (glideEnable.toBoolean()) {
         implementation project(':BusinessFactory:glidebusiness')
     }
-
     debugImplementation dependencies.debugleakCanary
     releaseImplementation dependencies.releaseleakCanary
 }

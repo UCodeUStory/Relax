@@ -1,15 +1,15 @@
 package com.ustory.module_business_three.view
 
+import com.mvvm.KoinBaseActivity
 import com.ustory.module_business_three.R
 import com.ustory.module_business_three.viewmodel.WxNewsViewModel
-import com.mvvm.MvvmBaseActivity
+import org.koin.android.viewmodel.ext.android.viewModel
 
-class WxNewsActivity : MvvmBaseActivity<WxNewsViewModel>() {
+class WxNewsActivity : KoinBaseActivity() {
     override val layoutId: Int
         get() = R.layout.activity_wx_news
-    override var initViewModelClass: Class<WxNewsViewModel>
-        get() = WxNewsViewModel::class.java
-        set(value) {}
+
+    val vm: WxNewsViewModel by viewModel()
 
     override fun initView() {
     }

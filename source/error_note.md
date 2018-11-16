@@ -23,3 +23,6 @@
 
 7. 当新建一个module时候，被其他module引用找不到类，这种时候有可能是没有加apply plugin: 'kotlin-android'
 
+8. ViewModel的创建 ViewModelProviders.of(activity, MdServiceViewModelFactory),当传入的activity是统一对象就会只创建一个实例
+
+9. MutableLiveData 当一次通知以后，后来的观察者也同样会接收到上一次数据

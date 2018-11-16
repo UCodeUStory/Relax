@@ -7,12 +7,11 @@ import com.ustory.module_business_one.view.WeatherFragment
 import com.ustory.module_business_three.view.WxNewsFragment
 import com.ustory.module_business_two.view.WelfareFragment
 import com.ustory.relax.adapter.MainViewPagerAdapter
-import com.ustory.relax_basic_component.core.AndroidPermission
 import com.ustory.relax_basic_component.core.base.BaseAppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-class MainActivity : BaseAppCompatActivity(){
+class MainActivity : BaseAppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,9 +23,9 @@ class MainActivity : BaseAppCompatActivity(){
         datas.add(WxNewsFragment())
         datas.add(WelfareFragment())
 
-        var titles:Array<String> = arrayOf("天气","新闻","福利")
+        var titles: Array<String> = arrayOf("天气", "新闻", "福利")
 
-        viewpager_main.adapter = MainViewPagerAdapter(supportFragmentManager ,datas,titles)
+        viewpager_main.adapter = MainViewPagerAdapter(supportFragmentManager, datas, titles)
         tl_main.setupWithViewPager(viewpager_main)
 
 
@@ -36,8 +35,5 @@ class MainActivity : BaseAppCompatActivity(){
 //            onPermissionGranted(mGrantCallBack)
 //        }
 
-
     }
-
 }
-
