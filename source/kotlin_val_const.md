@@ -20,5 +20,7 @@
 等价于java中的
 public final
 
+#### 如果被companion object 修饰，const和val都可以用private和public
+
 
 
