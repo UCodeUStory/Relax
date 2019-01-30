@@ -18,7 +18,7 @@ Relax 基于Kotlin语言编写的一套组件化框架，内部可以实现灵�
 Relax is a android frame by Component Frame
 
 ### 语言
-[Kotlin 学习笔记、里面是我踩过的各种坑(>_<) ](https://github.com/UCodeUStory/Relax/tree/master/source/kotlin.md)
+[Kotlin 使用技巧、里面是我踩过的各种坑(>_<) ](https://github.com/UCodeUStory/Relax/tree/master/source/kotlin.md)
 
 
 <div align="center">
@@ -109,6 +109,9 @@ Relax is a android frame by Component Frame
 
 #### 11. 引入koin来解决kotlin依赖注入，更加方面，里面没有反射、代码生成
 
+#### 12. 封装权限处理 AndroidPermission
+
+#### 13. 封装多个值同时不为Null的判断,避免繁琐嵌套 CheckNullUtil
 
 Libraries Used
 --------------
