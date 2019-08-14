@@ -10,17 +10,16 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import com.ustory.module_business_three.R
+import com.ustory.relax_business_component.businesscase.wxnews.model.WXNewsModel
 import com.ustory.relax_business_component.imageloader.loader
-import com.ustory.relax_data_componet.data.WXNewsResult
-import java.util.*
 
 /**
  * create qiyue
  */
-class WXListAdapter(datas: List<WXNewsResult.ResultBean.ListBean>,  val context: Context) : RecyclerView.Adapter<WXListAdapter.ViewHolder>() {
+class WXListAdapter(datas: List<WXNewsModel.ResultModel.ListModel>, val context: Context) : RecyclerView.Adapter<WXListAdapter.ViewHolder>() {
 
 
-    var datas: List<WXNewsResult.ResultBean.ListBean> = ArrayList<WXNewsResult.ResultBean.ListBean>()
+    var datas: List<WXNewsModel.ResultModel.ListModel> = listOf()
 
     var mOnClickListener: OnClickListener? = null
 
@@ -38,8 +37,8 @@ class WXListAdapter(datas: List<WXNewsResult.ResultBean.ListBean>,  val context:
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        holder.tvTitle.setText(datas[position].title)
-        holder.tvSource.setText(datas[position].source)
+        holder.tvTitle.text = datas[position].title
+        holder.tvSource.text = datas[position].source
         if(TextUtils.isEmpty(datas[position].firstImg)){
             holder.swImageView.visibility = View.GONE
         }else {

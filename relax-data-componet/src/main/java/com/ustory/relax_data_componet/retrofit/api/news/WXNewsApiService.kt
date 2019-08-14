@@ -1,24 +1,18 @@
 package com.ustory.relax_data_componet.retrofit.api.news
 
 
-import com.ustory.relax_data_componet.data.WXNewsResult
+import com.ustory.relax_data_componet.data.wxnews.WXNewsRecord
 import io.reactivex.Observable
-import retrofit2.Call
 import retrofit2.http.GET
-import retrofit2.http.Query
+import retrofit2.http.QueryMap
 
 /**
  * Created by qiyue on 2018/7/5.
  */
 
 interface WXNewsApiService {
-
     @GET("query")
-    fun findWXNews(@Query("pno") pno: Int, @Query("ps") ps: Int, @Query("dtype") dtype: String, @Query("key") key: String): Call<WXNewsResult>
-
-    @GET("query")
-    fun findWXNewsRxJava(@Query("pno") pno: Int, @Query("ps") ps: Int, @Query("dtype") dtype: String, @Query("key") key: String): Observable<WXNewsResult>
-
+    fun findWXNews(@QueryMap params: Map<String, String>): Observable<WXNewsRecord>
     companion object {
 
         /**

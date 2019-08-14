@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".login.view.LoginActivity">
         </activity>
-        <activity android:name=".core.WebViewActivity"/>
+        <activity android:name=".webview.WebViewActivity"/>
     </application>
 
 

@@ -14,18 +14,16 @@ import android.widget.TextView
 import com.ustory.module_business_two.R
 import com.ustory.module_business_two.data.OtherBean
 import com.ustory.module_business_two.widget.FitXYImageView
+import com.ustory.relax_business_component.businesscase.meizi.model.ContentlistModel
+import com.ustory.relax_business_component.businesscase.meizi.model.XModel
 import com.ustory.relax_business_component.imageloader.loader
-import com.ustory.relax_data_componet.data.MeiZiResult2
-import com.ustory.relax_data_componet.data.MeiziResult.ShowapiResBodyBean.PagebeanBean.ContentlistBean
-import com.ustory.relax_data_componet.data.MeiziResult.ShowapiResBodyBean.PagebeanBean.ContentlistBean.ListBean
 
 
 class MeiziListAdapter : RecyclerView.Adapter<MeiziListAdapter.ItemViewHolder> {
-    var mDatas: MutableList<ListBean> = mutableListOf()
+    var mDatas: MutableList<XModel> = mutableListOf()
     var mOtherBeans: MutableList<OtherBean> = mutableListOf()
     var mContext: Context
-    var mList: List<MeiZiResult2.DataBean> = mutableListOf()
-    constructor(datas: MutableList<ContentlistBean>, context: Context) {
+    constructor(datas: MutableList<ContentlistModel>, context: Context) {
         this.mContext = context
         initDatas(datas)
     }
@@ -36,11 +34,11 @@ class MeiziListAdapter : RecyclerView.Adapter<MeiziListAdapter.ItemViewHolder> {
     }
 
     override fun getItemCount(): Int {
-        return mList.size
+        return mDatas.size
     }
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val viewHolder = holder as ItemViewHolder
-        viewHolder.iv_picture.loader(mList[position].url!!)
+        viewHolder.iv_picture.loader(mDatas[position].middle)
     }
 
     class ItemViewHolder : RecyclerView.ViewHolder {
@@ -64,21 +62,17 @@ class MeiziListAdapter : RecyclerView.Adapter<MeiziListAdapter.ItemViewHolder> {
     }
 
 
-    public fun initDatas(list: MutableList<ContentlistBean>) {
-//        this.mList = list
-//        for (data in mList) {
-//            //只需要创建一个,减少内存开销
-//            val otherBean = OtherBean(data.title, data.ct, data.typeName)
-////            for (listBean in data.list!!) {
-//                //多个引用指向一个 对象
-////                mDatas.add(listBean)
-////                mOtherBeans.add(otherBean)
-////            }
-//
-//        }
+    public fun initDatas(list: MutableList<ContentlistModel>) {
+        for (data in list) {
+            //只需要创建一个,减少内存开销
+            val otherBean = OtherBean(data.title, data.ct, data.typeName)
+            for (listBean in data.list) {
+        //        多个引用指向一个 对象
+                mDatas.add(listBean)
+                mOtherBeans.add(otherBean)
+            }
+
+        }
     }
 
-    fun initDatas2(data: List<MeiZiResult2.DataBean>) {
-        this.mList = data
-    }
 }

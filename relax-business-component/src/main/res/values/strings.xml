@@ -1,4 +1,31 @@
 <resources>
     <string name="app_name">relax-business-component</string>
-    <color name="github_title">#25292E</color>
+
+    <string name="c_common_confirm">确定</string>
+    <string name="c_common_cancel">取消</string>
+    <string name="c_common_error">错误</string>
+    <string name="c_common_all">全部</string>
+    <string name="c_common_none">无</string>
+    <string name="c_common_yes">是</string>
+    <string name="c_common_no">否</string>
+    <string name="c_common_save">保存</string>
+    <string name="c_common_close">关闭</string>
+    <string name="c_common_back">返回</string>
+    <string name="c_common_unknown">未知</string>
+    <string name="c_common_setup">设置</string>
+    <string name="c_common_more">更多</string>
+
+    <!--Error-->
+    <string name="c_error_service_failed">请求失败</string>
+    <string name="c_request_timeout">连接超时</string>
+    <string name="c_connect_failed">连接失败</string>
+    <string name="c_http_error">网络错误</string>
+    <string name="m_error_service_failed_with_code">请求失败(%1$s)</string>
+    <string name="m_null_response_data">服务数据异常，请稍后重试。</string>
+    <string name="m_json_parse_failed">数据解析时发生错误，请稍后重试。</string>
+    <string name="m_check_network">请检查网络连接。</string>
+
+    <!--Loading-->
+    <string name="m_loading">加载中请稍等…</string>
+
 </resources>

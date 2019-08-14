@@ -14,13 +14,22 @@ open class BaseVM :ViewModel(), IRequestStatus {
 
     override val error: MutableLiveData<Throwable> = MutableLiveData()
 
-    inner class BaseObserver<T>(status: IRequestStatus, val listener:(data:T)->Unit) : RequestObserver<T>(status) {
-        override fun onNext(data: T) {
-            super.onNext(data)
-            listener(data)
-//            user.value = data
+    abstract inner class ViewModelObserver<T> : DefaultObserver<T>() {
+        override fun onStart() {
+            super.onStart()
+            loading.value = true
+        }
+
+        override fun onError(throwable: Throwable) {
+            super.onError(throwable)
+            loading.value = false
+            error.value = throwable
+        }
+
+        override fun onComplete() {
+            super.onComplete()
+            loading.value = false
         }
     }
-
 }
 

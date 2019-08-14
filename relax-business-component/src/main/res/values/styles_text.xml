@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="mdui_text_content">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/mdui_text_content</item>
+        <item name="android:textSize">@dimen/mdui_text_size_m</item>
+    </style>
+
+    <style name="mdui_text_title" parent="mdui_text_content">
+        <item name="android:textColor">@color/mdui_text_title</item>
+    </style>
+
+    <style name="mdui_text_title_l" parent="mdui_text_title">
+        <item name="android:textSize">@dimen/mdui_text_size_l</item>
+    </style>
+
+    <style name="mdui_text_title_single" parent="mdui_text_content">
+        <item name="android:textColor">@color/mdui_text_title</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="mdui_text_hint" parent="mdui_text_content">
+        <item name="android:textColor">@color/theme_text_hint</item>
+    </style>
+
+</resources>

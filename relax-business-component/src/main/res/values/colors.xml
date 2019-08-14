@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_common_header">#FFF2F2F2</color>
+    <color name="bg_theme_default">#FFFFFF</color>
+
+    <color name="mdui_text_title">#FF333333</color>
+    <color name="mdui_text_content">#FF555555</color>
+
+    <!--Common Text Color-->
+    <color name="theme_text_title">#FF333333</color>
+    <color name="theme_text_content">#FF555555</color>
+    <color name="theme_text_hint">#FFCCCCCC</color>
+    <color name="theme_text_disabled">#FFCCCCCC</color>
+    <color name="theme_text_light">#FF999999</color>
+
+    <color name="github_title">#25292E</color>
+</resources>

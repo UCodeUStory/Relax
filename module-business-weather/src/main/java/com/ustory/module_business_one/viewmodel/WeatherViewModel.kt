@@ -4,8 +4,8 @@ import android.arch.lifecycle.MutableLiveData
 import com.ustory.module_business_one.model.WeatherModel
 import com.mvvm.BaseVM
 import com.ustory.relax_business_component.app.App
-import com.ustory.relax_data_componet.data.JHWeatherResult
-import com.ustory.relax_data_componet.data.WeatherResult
+import com.ustory.relax_data_componet.data.weather.JHWeatherResult
+import com.ustory.relax_data_componet.data.weather.WeatherResult
 
 class WeatherViewModel: BaseVM() {
 

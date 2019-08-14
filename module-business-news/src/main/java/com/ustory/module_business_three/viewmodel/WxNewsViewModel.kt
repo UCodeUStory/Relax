@@ -1,23 +1,34 @@
 package com.ustory.module_business_three.viewmodel
 
+import android.app.Application
 import android.arch.lifecycle.MutableLiveData
-import com.ustory.module_business_three.model.WxNewsModel
-import com.mvvm.BaseVM
-import com.ustory.relax_business_component.app.App
-import com.ustory.relax_data_componet.data.WXNewsResult
+import com.mvvm.BaseAVM
+import com.ustory.relax_business_component.businesscase.wxnews.model.WXNewsModel
+import com.ustory.relax_business_component.businesscase.wxnews.params.WxNewsParams
+import com.ustory.relax_business_component.businesscase.wxnews.usecase.WxNewUseCase
+import com.ustory.relax_business_component.core.CoreService
 
-class WxNewsViewModel: BaseVM() {
+class WxNewsViewModel(application: Application,
+                      val service: CoreService
+) : BaseAVM(application) {
 
+    val wxNewsResult: MutableLiveData<WXNewsModel> = MutableLiveData()
 
-    val wxNewsResult: MutableLiveData<WXNewsResult> = MutableLiveData()
-
-    val model = App.coreService.create(::WxNewsModel)
+    val wxNewUseCase = service.create(::WxNewUseCase)
 
     fun findWxNews(page: Int, pageSize: Int) {
-        model.findWxNews(page, pageSize, "json",BaseObserver<WXNewsResult>(this, {
-            wxNewsResult.value = it
-        }))
-    }
+        val params = WxNewsParams(
+            page.toString(),
+            pageSize.toString(),
+            "json"
+        )
 
+        wxNewUseCase.execute(params, object : ViewModelObserver<WXNewsModel>() {
+            override fun onNext(t: WXNewsModel) {
+                wxNewsResult.value = t
+            }
+        })
+
+    }
 
 }

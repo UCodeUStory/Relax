@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Common-->
+    <dimen name="common_eidttext_height">50dp</dimen>
+    <!--Header-->
+    <dimen name="common_header_height">50dp</dimen>
+    <!--StatusBar-->
+    <dimen name="common_statusbar_height">24dp</dimen>
+
+    <!--Dialog-->
+    <dimen name="common_dialog_height">200dp</dimen>
+    <dimen name="common_dialog_width">382dp</dimen>
+    <dimen name="common_dialog_title_height">@dimen/common_header_height</dimen>
+    <dimen name="common_dialog_medium_width">500dp</dimen>
+    <dimen name="common_dialog_large_width">600dp</dimen>
+    <dimen name="common_dialog_large_height">420dp</dimen>
+    <dimen name="common_dialog_large_min_height">420dp</dimen>
+    <dimen name="common_dialog_large_min_width">600dp</dimen>
+
+    <dimen name="mdui_spacing">16dp</dimen>
+
+    <!--Text-->
+    <dimen name="mdui_text_size_s">14sp</dimen>
+    <dimen name="mdui_text_size_m">16sp</dimen>
+    <dimen name="mdui_text_size_l">18sp</dimen>
+    <dimen name="mdui_text_size_xl">20sp</dimen>
+    <dimen name="mdui_text_size_xxl">22sp</dimen>
+</resources>

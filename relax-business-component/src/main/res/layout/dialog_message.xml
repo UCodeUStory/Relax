@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/common_dialog_width"
+    android:layout_height="wrap_content"
+    android:minHeight="200dp"
+    android:orientation="vertical"
+    android:background="@color/bg_theme_default">
+
+    <include layout="@layout/partial_dialog_header" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="@dimen/mdui_spacing">
+
+        <TextView
+            android:id="@+id/tv_message_dialog_message"
+            style="@style/mdui_text_content"
+            android:textColor="@color/theme_text_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="@dimen/mdui_spacing"
+            android:textSize="@dimen/mdui_text_size_l"
+            tools:text="123"/>
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_message_dialog_operation"
+        android:textColor="@color/theme_text_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/mdui_spacing"
+        android:text="@string/c_common_confirm"
+        android:visibility="gone"
+       />
+
+</LinearLayout>

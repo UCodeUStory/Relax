@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 android {
@@ -94,6 +95,7 @@ dependencies {
     }
     api 'com.alibaba:arouter-api:1.2.1.1'
     kapt 'com.alibaba:arouter-compiler:1.1.2.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
 }
 repositories {

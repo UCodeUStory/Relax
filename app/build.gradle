@@ -85,13 +85,14 @@ dependencies {
     implementation dependencies.constraintLayout
 
     if (isApp.toBoolean()) {
-        implementation project(':module-business-plugin')
+//        implementation project(':module-business-plugin')
         implementation project(':module-business-news')
-        implementation project(':module-business-weather')
+//        implementation project(':module-business-weather')
         implementation project(':module-business-welfare')
     }
     implementation project(':relax-business-component')
     kapt dependencies.arouter
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
 
 }

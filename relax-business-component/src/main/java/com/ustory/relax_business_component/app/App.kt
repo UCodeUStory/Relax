@@ -7,7 +7,6 @@ import com.alibaba.android.arouter.launcher.ARouter
 import com.squareup.leakcanary.LeakCanary
 import com.ustory.glidebusiness.GlideLoader
 import com.ustory.relax_basic_component.config.CoreConfig
-import com.ustory.relax_basic_component.utils.ToastUtil
 import com.ustory.relax_business_component.core.CoreService
 import com.ustory.relax_business_component.imageloader.ImageEngine
 
@@ -26,10 +25,9 @@ class App : Application() {
         ARouter.init(this)
         /** 初始化全局context */
         context = applicationContext
+        instance = this
         /** 初始化图片引擎 */
         ImageEngine.instance.loader = GlideLoader()
-        /** 初始化Toast工具 */
-        ToastUtil.bindContext(this)
         /** 初始化服务 可以在登陆的时候动态配置 */
         val coreConfig = CoreConfig("hello", Build.MODEL,true)
         updateService(coreConfig)
@@ -42,6 +40,7 @@ class App : Application() {
     companion object {
         lateinit var coreService: CoreService
         lateinit var context: Context
+        lateinit var instance: App
         var isServiceReady:Boolean = false
         fun updateService(coreConfig:CoreConfig) {
             coreService = CoreService(context.applicationContext, config = coreConfig)

@@ -67,4 +67,8 @@ dependencies {
     }
     debugImplementation dependencies.debugleakCanary
     releaseImplementation dependencies.releaseleakCanary
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }

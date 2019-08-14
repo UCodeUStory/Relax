@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_dialog_title_height"
+    android:background="@color/bg_common_header">
+
+    <Button
+        android:id="@+id/btn_partial_dialog_header_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:minWidth="0dp"
+        android:text="@string/c_common_cancel"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_partial_dialog_header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        tools:text="Title" />
+
+    <Button
+        android:id="@+id/btn_partial_dialog_header_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:minWidth="0dp"
+        android:text="@string/c_common_confirm" />
+
+    <View
+        style="@style/split_line_horizontal"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

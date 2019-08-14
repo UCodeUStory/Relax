@@ -17,7 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.ustory.relax_business_component.core.WebViewActivity"
+        <activity android:name="com.ustory.relax_business_component.webview.WebViewActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
     </application>
 

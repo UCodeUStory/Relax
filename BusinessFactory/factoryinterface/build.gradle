@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
 android {
     def globalConfiguration = rootProject.extensions.getByName("ext")
@@ -43,4 +44,8 @@ dependencies {
     implementation testDependencies.junit
     implementation testDependencies.espressoCore
     implementation testDependencies.runner
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }

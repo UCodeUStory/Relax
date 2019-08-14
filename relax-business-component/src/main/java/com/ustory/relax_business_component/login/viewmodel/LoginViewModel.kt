@@ -1,10 +1,8 @@
 package com.ustory.relax_business_component.login.viewmodel
 
 import android.arch.lifecycle.MutableLiveData
-import com.ustory.relax.data.User
 import com.mvvm.BaseVM
-import com.ustory.relax_business_component.app.App
-import com.ustory.relax_business_component.login.model.LoginModel
+import com.ustory.relax_business_component.businesscase.login.model.UserModel
 
 
 /**
@@ -12,18 +10,18 @@ import com.ustory.relax_business_component.login.model.LoginModel
  */
 class LoginViewModel: BaseVM(){
 
-    val user: MutableLiveData<User> = MutableLiveData()
+    val user: MutableLiveData<UserModel> = MutableLiveData()
 
-    val user2: MutableLiveData<User> = MutableLiveData()
+    val user2: MutableLiveData<UserModel> = MutableLiveData()
 
-    private val loginModel: LoginModel = App.coreService.create(::LoginModel)
+//    private val loginModel: LoginModel = App.coreService.create(::LoginModel)
 
     override fun onCleared() {
         super.onCleared()
     }
 
     fun login(name:String,password:String){
-        loginModel.login(BaseObserver<User>(this,{ user.value = it}),name,password)
+//        loginModel.login(BaseObserver<User>(this,{ user.value = it}),name,password)
 
     }
 

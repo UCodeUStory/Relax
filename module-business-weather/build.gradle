@@ -72,4 +72,8 @@ dependencies {
     implementation dependencies.constraintLayout
     implementation dependencies.supportV4
     kapt dependencies.arouter
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }

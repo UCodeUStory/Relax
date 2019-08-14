@@ -6,9 +6,7 @@ import timber.log.Timber
 /**
  * Created by qiyue on 2018/8/19.
  */
-open class DefaultObserver<T> : DisposableObserver<T>() {
-
-    override fun onNext(data: T) {}
+open abstract class DefaultObserver<T> : DisposableObserver<T>() {
 
     override fun onComplete() {}
 

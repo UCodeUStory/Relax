@@ -1,10 +1,10 @@
 package com.ustory.relax_data_componet.retrofit.api.meizi
 
-import com.ustory.relax_data_componet.data.MeiZiResult2
-import com.ustory.relax_data_componet.data.MeiziResult
+import com.ustory.relax_data_componet.data.meizi.MeiziPictureRecord
 import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Query
+import retrofit2.http.QueryMap
 
 //import io.reactivex.Observable;
 
@@ -13,7 +13,11 @@ interface MeiziApiService {
 
     @GET("852-2")
     fun searchMeiziPicture(@Query("page") page: Int, @Query("type") type: String,
-                           @Query("showapi_appid") showapi_appid: String, @Query("showapi_sign") showapi_sign: String): Observable<MeiziResult>
+                           @Query("showapi_appid") showapi_appid: String, @Query("showapi_sign") showapi_sign: String): Observable<MeiziPictureRecord>
+
+
+    @GET("852-2")
+    fun searchPicture(@QueryMap params: Map<String, String>): Observable<MeiziPictureRecord>
 
     companion object {
 
@@ -35,9 +39,6 @@ interface MeiziApiService {
         val secret_4 = ""
     }
 
-
-    @GET("meituApi")
-    fun findMeiziPicture(@Query("page") page:Int):Observable<MeiZiResult2>
 
 
 }

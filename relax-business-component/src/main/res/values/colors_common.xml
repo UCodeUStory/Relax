@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mdui_transparent">#00000000</color>
+    <color name="mdui_transparent_white_10">#19FFFFFF</color>
+    <color name="mdui_transparent_white_20">#33FFFFFF</color>
+    <color name="mdui_transparent_white_30">#4CFFFFFF</color>
+    <color name="mdui_transparent_white_40">#66FFFFFF</color>
+    <color name="mdui_transparent_white_50">#7FFFFFFF</color>
+    <color name="mdui_transparent_white_60">#99FFFFFF</color>
+    <color name="mdui_transparent_white_70">#B2FFFFFF</color>
+    <color name="mdui_transparent_white_80">#CCFFFFFF</color>
+    <color name="mdui_transparent_white_90">#E5FFFFFF</color>
+    <color name="mdui_transparent_black_5">#0D000000</color>
+    <color name="mdui_transparent_black_10">#19000000</color>
+    <color name="mdui_transparent_black_20">#33000000</color>
+    <color name="mdui_transparent_black_30">#4C000000</color>
+    <color name="mdui_transparent_black_40">#66000000</color>
+    <color name="mdui_transparent_black_50">#7F000000</color>
+    <color name="mdui_transparent_black_60">#99000000</color>
+    <color name="mdui_transparent_black_70">#B2000000</color>
+    <color name="mdui_transparent_black_80">#CC000000</color>
+    <color name="mdui_transparent_black_90">#E5000000</color>
+
+    <color name="mdui_white">#FFFFFFFF</color>
+    <color name="mdui_black">#FF000000</color>
+    <color name="mdui_grey">#FFE6E6E6</color>
+    <color name="mdui_dark_grey">#FF8E9AAA</color>
+    <color name="mdui_red">#FFEC584E</color>
+    <color name="mdui_green">#FF5CB75C</color>
+    <color name="mdui_blue">#FF2196F3</color>
+    <color name="mdui_dark_blue">#FF2C3A4A</color>
+    <color name="mdui_gold">#FFBF8F68</color>
+    <color name="mdui_brown">#FF89552E</color>
+    <color name="mdui_cyan">#FF2AB6DF</color>
+    <color name="mdui_yellow">#FFEFAE53</color>
+    <color name="mdui_purple">#FFBD9DC3</color>
+
+    <!--Background-->
+    <color name="mdbui_main_bg_page_title">#FFF2F2F2</color>  <!--标题栏颜色-->
+    <color name="mdbui_main_bg_split_line">#FFCDCDCD</color>
+    <color name="mdbui_main_bg_window">#FFEAEFF5</color>
+    <color name="mdbui_main_bg_filter_bar">#FFE6E6E6</color>
+
+</resources>

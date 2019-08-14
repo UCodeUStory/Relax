@@ -1,7 +1,7 @@
 package com.ustory.relax_data_componet.retrofit.api.weather
 
-import com.ustory.relax_data_componet.data.JHWeatherResult
-import com.ustory.relax_data_componet.data.WeatherResult
+import com.ustory.relax_data_componet.data.weather.JHWeatherResult
+import com.ustory.relax_data_componet.data.weather.WeatherResult
 import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Path

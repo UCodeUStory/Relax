@@ -12,8 +12,6 @@ class WeatherActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_weather)
 
-
-
         startActivity(Intent(this,LoginActivity::class.java))
     }
 }

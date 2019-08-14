@@ -2,10 +2,10 @@ package com.ustory.relax_business_component.core
 
 import android.content.Context
 import com.ustory.relax_basic_component.config.CoreConfig
-import com.ustory.relax_basic_component.core.ICoreService
-import com.ustory.relax_basic_component.core.base.BaseModel
-import com.ustory.relax_data_componet.DataServiceManager
-import com.ustory.relax_data_componet.IDataService
+import com.ustory.relax_basic_component.core.CoreContext
+import com.ustory.relax_business_component.core.dataservice.IDataService
+import com.ustory.relax_business_component.core.dataservice.LocalDataService
+import com.ustory.relax_business_component.core.dataservice.NetDataService
 
 
 /**
@@ -16,13 +16,17 @@ import com.ustory.relax_data_componet.IDataService
 
 
 class CoreService(
-        val appContext: Context,
-        val config: CoreConfig
-): ICoreService() {
+    val appContext: Context,
+    val config: CoreConfig
+) : CoreContext() {
 
-    val netService: IDataService by lazy { DataServiceManager.netDataService  }
+    val netService: IDataService by lazy {
+        NetDataService(
+            this
+        )
+    }
 
-    val localService: IDataService by lazy { DataServiceManager.locatDataService }
+    val localService: IDataService by lazy { LocalDataService() }
 
     val dataService: IDataService = if (config.isOnline) {
         netService
@@ -30,7 +34,7 @@ class CoreService(
         localService
     }
 
-    fun <T : BaseModel> create(factory: (CoreService) -> T): T = factory(this)
+    fun <T : CoreUseCase<*, *>> create(factory: (CoreService) -> T): T = factory(this)
 
 
 }
